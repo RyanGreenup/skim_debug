@@ -1,0 +1,4355 @@
+---
+title: ProgrammingFundamentals
+tags: [Notebooks/University, Notebooks/Programming/Java]
+created: '2020-01-11T05:25:08.826Z'
+modified: '2020-01-12T20:34:42.874Z'
+---
+
+# Programming Fundamentals Notes
+
+
+
+Refer to: `/home/ryan/Notes/PDF/Java`
+
+## <!-- Contents -->
+<details  open markdown="1"><summary><h4> 📜 Contents <h4></summary><p>
+     
+**Table of Contents**
+
+- [Practical 1](#practical-1)
+    - [Problem 1_1 - Getting Started](#problem-11---getting-started)
+        - [Code](#code)
+    - [Problem 1_2](#problem-12)
+        - [Code](#code-1)
+    - [Problem 1_3](#problem-13)
+        - [Code](#code-2)
+    - [Problem 1_4](#problem-14)
+        - [Code](#code-3)
+    - [Problem 1_4](#problem-14-1)
+        - [Code](#code-4)
+    - [Problem 1_5](#problem-15)
+        - [Code](#code-5)
+- [Practical 2](#practical-2)
+    - [Problem 1 - Find Leaf](#problem-1---find-leaf)
+        - [Code](#code-6)
+    - [Problem 2 - Turn on Leaf](#problem-2---turn-on-leaf)
+        - [Code](#code-7)
+    - [Problem 2_3](#problem-23)
+        - [Code](#code-8)
+    - [Problem 4 - Bonus (Leaves on the Edge)](#problem-4---bonus-leaves-on-the-edge)
+        - [Code](#code-9)
+- [Practical 3](#practical-3)
+    - [Problem 1 - Climbing Stairs](#problem-1---climbing-stairs)
+        - [Code](#code-10)
+    - [Problem 2 - Filling Gaps](#problem-2---filling-gaps)
+        - [Code](#code-11)
+    - [Problem 3  - Solving a Maze](#problem-3----solving-a-maze)
+        - [Code](#code-12)
+    - [Problem 4 - Street Centre](#problem-4---street-centre)
+        - [Code](#code-13)
+- [Practical 4 - Decomposition](#practical-4---decomposition)
+    - [Fixing Columns](#fixing-columns)
+        - [Code](#code-14)
+    - [Checkerboard - Bottom Left (Bonus)](#checkerboard---bottom-left-bonus)
+        - [Code](#code-15)
+    - [Fix Leaf Trail](#fix-leaf-trail)
+        - [Code](#code-16)
+    - [Mini Pacman](#mini-pacman)
+        - [Code](#code-17)
+- [Practical 5 - Variables](#practical-5---variables)
+    - [1 Count Leaves and Steps](#1-count-leaves-and-steps)
+        - [Code](#code-18)
+    - [2 Maze Run](#2-maze-run)
+        - [Code](#code-19)
+    - [3 Longest Step](#3-longest-step)
+        - [Code](#code-20)
+    - [4 Checkerboard With Boolean](#4-checkerboard-with-boolean)
+        - [Code](#code-21)
+    - [5 Mushroom in Tunnel (BONUS)](#5-mushroom-in-tunnel-bonus)
+        - [Bonus Problem](#bonus-problem)
+        - [Code](#code-22)
+- [Practical 6 - Arithmetic Operations & Arrays](#practical-6---arithmetic-operations--arrays)
+    - [1 Baking a Cake](#1-baking-a-cake)
+        - [Code](#code-23)
+    - [2 Candles on a Cake](#2-candles-on-a-cake)
+        - [Code](#code-24)
+    - [3 Candles for Age](#3-candles-for-age)
+        - [Code](#code-25)
+    - [Working with Arrays](#working-with-arrays)
+        - [Code](#code-26)
+    - [Firestart (BONUS)](#firestart-bonus)
+- [Practical 7 - Bonus](#practical-7---bonus)
+    - [Simple Array](#simple-array)
+        - [Code](#code-27)
+    - [Sokoban Game](#sokoban-game)
+        - [Code](#code-28)
+    - [3 Levels with Arrays](#3-levels-with-arrays)
+        - [Code](#code-29)
+- [Major Assessment](#major-assessment)
+    - [Assessment Description](#assessment-description)
+        - [Important Requirements](#important-requirements)
+            - [Important note 1](#important-note-1)
+            - [Important note 2](#important-note-2)
+            - [Important note 3](#important-note-3)
+        - [Clara's Vocabulary](#claras-vocabulary)
+        - [Ghosts Vocabulary](#ghosts-vocabulary)
+    - [Making the Game](#making-the-game)
+        - [Part 1 - Moving Clara and Keyboard Input](#part-1---moving-clara-and-keyboard-input)
+        - [Part 2 - Animating Clara’s Movement](#part-2---animating-claras-movement)
+        - [Part 3 - Clara Collisions with Trees and Ghost Walls](#part-3---clara-collisions-with-trees-and-ghost-walls)
+        - [Part 5 - Moving Ghosts](#part-5---moving-ghosts)
+        - [Part 6 - Animating Ghosts’ Movement](#part-6---animating-ghosts-movement)
+        - [Part 7 - Ghosts and Tree Collisions](#part-7---ghosts-and-tree-collisions)
+        - [Part 8 - AI and Intersections](#part-8---ai-and-intersections)
+        - [Part 9 – Ghosts Colliding with Clara and Losing](#part-9--ghosts-colliding-with-clara-and-losing)
+        - [Part 10 – Eating Mushrooms and Making Ghosts Eatable](#part-10--eating-mushrooms-and-making-ghosts-eatable)
+        - [Part 11 - Ghosts and Regeneration](#part-11---ghosts-and-regeneration)
+        - [Part 12 – Making and Adding Levels](#part-12--making-and-adding-levels)
+        - [Part 13 – Life is Good](#part-13--life-is-good)
+    - [The Code I used](#the-code-i-used)
+        - [Clara](#clara)
+            - [Code](#code-30)
+        - [Ghost](#ghost)
+            - [Code](#code-31)
+
+<!-- markdown-toc end -->
+
+    
+</p>
+</details>
+
+
+So basically you don't really write java, you write something really close to it into a ladybug game online.
+
+
+
+I really recommend reading like the first couple of chapters of the Java book and doing the exercises in an IDE like IntelliJidea, that's what I did and I found it really helpful.
+
+Ive included below the practicals and the answers I put for them.]
+
+If you go to https://www.claraworld.net/ and sign up you should be able to start doing problems, you may just have to select an arbitrary tutor, but it won't matter because you're not doing the class, just get into it and start doing problems.
+
+The problem Solutions that I've included below correspond to the Autumn 2019 semester for reference.
+
+
+
+# Practical 1
+
+## Problem 1_1 - Getting Started
+Clara went for a short stroll. After hours of walking she arrives at the beautiful the meadow, where in the middle stands a big tree, not that different from the tree on the Bag End. It is really hot and Clara desires a bit of shade. Help Clara to come to the tree (Figure 2) from her initial position (Figure 1). Make sure that Clara stands exactly at the specific position. Clara can step on leaves, but she will crash with the tree.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-getting-started-9C63xvxNqGBPaxc5c/Figure_1_1_1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-getting-started-9C63xvxNqGBPaxc5c/Figure_1_1_2.png)
+
+**Figure 2.**
+
+
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); putLeaf(); removeLeaf();
+*/
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+     void rightturn(){
+         turnLeft();
+         turnLeft();
+         turnLeft();
+     }
+
+    void run() {
+        // TODO: Write your code below
+
+        move();
+        rightturn();
+        move();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+        move();
+
+    }
+
+    void printOut() {
+        System.out.println(myString());
+    }
+
+    public static String myString() {
+        return "Hello World";
+    }
+}
+
+
+
+```
+
+
+
+## Problem 1_2
+n this problem you will create your first Java program.
+
+Clara is making first steps in her world that initially looks like Figure 1. The task at hand for Clara is to mark her territory with leaves as shown in Figure 2. By continuously moving forward Clara must put one leaf in every second cell, making sure that there is always a gap in the form of an empty cell separating every two leaves. Your program must be written inside method run().
+
+![Picture 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-putting-leaf-MYL8cByWAghdrebHS/Figure_1_2_1.png)
+
+**Picture 1.**
+
+![Picture 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-putting-leaf-MYL8cByWAghdrebHS/Figure_1_2_2.png)
+
+**Picture 2.**
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); putLeaf(); removeLeaf();
+*/
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+    void intersperseleaf() {
+        move();
+        putLeaf();
+        move();
+    }
+
+    void run() {
+        // TODO: Write your code below
+
+        intersperseleaf();
+
+        intersperseleaf();
+
+        intersperseleaf();
+
+        intersperseleaf();
+
+        intersperseleaf();
+
+        move();
+        move();
+        
+    }
+}
+```
+
+## Problem 1_3
+
+In this problem you will navigate Clara to her precious leaf while avoiding the trees that block Clara’s way. You will start with the world presented in Figure 1 and will have to produce the result shown in Figure 2.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-around-tree-zuT4kTpgpCWc7Ftsk/Figure_1_3_1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-around-tree-zuT4kTpgpCWc7Ftsk/Figure_1_3_2.png)
+
+**Figure 2.**
+
+The dotted line shown in Figure 2. represents the trajectory of Clara’s movement, so make sure that Clara moves exactly like shown there. After navigating her way around the trees Clara must eat the leaf, make one step forward and then stop.
+
+
+
+
+### Code
+
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); putLeaf(); removeLeaf();
+*/
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+     void rightturn() {
+         turnLeft();
+         turnLeft();
+         turnLeft();
+     }
+    void run() {
+        // TODO: Write your code below
+
+        move();
+        rightturn();
+        move();
+        turnLeft();
+        move();
+        move();
+        turnLeft();
+        move();
+        move();
+        rightturn();
+        move();
+        move();
+        rightturn();
+        move();
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+        removeLeaf();
+        rightturn();
+        move();
+    }
+}
+```
+
+
+
+## Problem 1_4
+
+After starting your project you will see Clara’s world shown in Figure 1. The aim of this problem is to make Clara exit her home, collect the leaf located outside, bring it back and put it in the position shown in Figure 2. Clara should move and turn to be positioned as shown in Figure 2.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-bring-leaf-6Wmu3ihPvPzErCtQy/Figure_1_4_1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-bring-leaf-6Wmu3ihPvPzErCtQy/Figure_1_4_2.png)
+
+**Figure 2.**
+
+
+### Code
+
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); putLeaf(); removeLeaf();
+*/
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+     void rightturn(){
+         turnLeft();
+         turnLeft();
+         turnLeft();
+     }
+
+    void run() {
+        // TODO: Write your code below
+        move();
+        rightturn();
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        removeLeaf();
+        turnLeft();
+        turnLeft();
+        move();
+        move();
+        move();
+        rightturn();
+        move();
+        move();
+        move();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+        turnLeft();
+        turnLeft();
+        putLeaf();
+        move();
+        move();
+        rightturn();
+    }
+}
+```
+
+## Problem 1_4
+
+After starting your project you will see Clara’s world shown in Figure 1. The aim of this problem is to make Clara exit her home, collect the leaf located outside, bring it back and put it in the position shown in Figure 2. Clara should move and turn to be positioned as shown in Figure 2.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-bring-leaf-6Wmu3ihPvPzErCtQy/Figure_1_4_1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-bring-leaf-6Wmu3ihPvPzErCtQy/Figure_1_4_2.png)
+
+**Figure 2.**
+
+
+### Code
+
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); putLeaf(); removeLeaf();
+*/
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+     void rightturn(){
+         turnLeft();
+         turnLeft();
+         turnLeft();
+     }
+
+    void run() {
+        // TODO: Write your code below
+        move();
+        rightturn();
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+        move();
+        move();
+        removeLeaf();
+        turnLeft();
+        turnLeft();
+        move();
+        move();
+        move();
+        rightturn();
+        move();
+        move();
+        move();
+        move();
+        move();
+        move();
+        turnLeft();
+        move();
+        turnLeft();
+        turnLeft();
+        putLeaf();
+        move();
+        move();
+        rightturn();
+    }
+}
+```
+
+
+
+
+
+## Problem 1_5
+
+In this problem, your goal is to make Clara move around and remove some leaves so that your initials emerge from the empty cells as shown in Figure 1. The letters can be as big or small as you like and have any form (as long as they are recognisable as letters).
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/Problem-5-Initials-BONUS--kkmzpe5pcprsPySYD/Figure_1__5_1.png)
+
+**Figure 1.**
+
+Figure 1 shows the initial world and Figure 2 shows how the result would like like if your first name starts with the letter "A" and your last name starts with the letter "B".
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/Problem-5-Initials-BONUS--kkmzpe5pcprsPySYD/Figure_1__5_2.png)
+
+**Figure 1.**
+
+Note! Please make sure that what you draw are your initials (not AB or something else). Markers would check your name and if the initials don't match then your mark will be 0 points.
+
+
+### Code
+
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); putLeaf(); removeLeaf();
+*/
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+    void rightturn(){
+        turnLeft();
+        turnLeft();
+        turnLeft();
+    } 
+
+    void rmL(){
+        removeLeaf();
+        move();
+    }   
+
+    void run() {
+        // TODO: Write your code below
+    rightturn();
+    move();
+    move();
+    turnLeft();
+    move();
+    move();
+    rmL();
+    rmL();
+    rmL();
+    move();
+    rmL();
+    rmL();
+    rmL();
+    rightturn();
+    move();
+    rightturn();
+    move();
+    move();
+    move();
+    removeLeaf();
+    turnLeft();
+    move();
+    rmL();
+    rmL();
+    rmL();
+    turnLeft();
+    rmL();
+    rmL();
+    rmL();
+    removeLeaf();
+    turnLeft();
+    move();
+    rmL();
+    removeLeaf();
+    turnLeft();
+    move();
+    removeLeaf();
+    turnLeft();
+    turnLeft();
+    move();
+    move();
+    removeLeaf();
+    turnLeft();
+    move();
+    move();
+    move();
+    turnLeft();
+    move();
+    move();
+    move();
+    move();
+    move();
+    move();
+    move();
+    move();
+    turnLeft();
+    move();
+    rmL();
+    rmL();
+    rmL();
+    rmL();
+    rmL();
+    removeLeaf();
+    turnLeft();
+    move();
+    move();
+    turnLeft();
+    rmL();
+    rmL();
+    rmL();
+    rmL();
+    rmL();
+    removeLeaf();
+    turnLeft();
+    turnLeft();
+    move();
+    rightturn();
+    move();
+    removeLeaf();
+    
+
+    
+
+
+
+    
+
+
+
+    }
+}
+```
+
+# Practical 2
+
+## Problem 1 - Find Leaf
+
+Clara woke up inside a maze as shown in Figure 1. She is very hungry and must quickly find a leaf and satisfy her hunger with it.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-find-leaf-anTLXGxJMK4gpdhh4/Figure_2_1__1.png)
+
+**Figure 1.**
+
+In the maze there is always only one leaf that is positioned close to the centre of the maze. Clara's objective is to walk to the leaf, step on top of it and eat the leaf. After eating the leaf she must stop. The maze is always of such a kind that Clara is able to get to the leaf by simply walking forward until she encounters a tree in front of her. When there is a tree blocking her way she should turn right and continue walking. She would know that her objective is completed when Clara discovers that she is positioned on top of a leaf. The result of executing your code should look similar to Figure 2.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-find-leaf-anTLXGxJMK4gpdhh4/Figure_2_1__2.png)
+
+**Figure 2.**
+
+Your solution must be generic and has to work with all supplied example worlds. This means that before submitting you must test your code with all supplied worlds and it must correctly work in all of those. You should also aim at making sure that the code would work with all similar worlds with similar properties (beyond the provided examples).
+
+
+### Code
+
+```java
+
+/* PERMITTED COMMANDS
+   move(); turnLeft(); turnRight(); treeLeft(); treeRight(); treeFront(); onLeaf(); putLeaf(); removeLeaf(); stop();
+   JAVA
+   if, else */
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'act()' method you can write your program for Clara 
+     */
+    //We'll right a program to solve mazes so we can call it later
+    void mazesolve(){
+        // To solve the maze we will follow the left wall until we are 
+            //enclosed by trees on all sides
+        //Assume that the perimeter will be surrounded by trees
+            //Otherwise it isn't really a maze
+            if(treeLeft() && !treeFront())
+            {
+                move();
+            }
+            if(treeFront())
+            {
+                if(!treeLeft())
+                {
+                    turnLeft();
+                }
+                if(treeLeft() && !treeRight())
+                {
+                    turnRight();
+                } //else would be stop but with no conditions satisfied
+                    //the script won't do anything so there is no need
+                        // to specify else
+            }
+    }
+    void act() {
+        // TODO: Write your code below
+
+    if(onLeaf()){
+        removeLeaf();
+    }
+    mazesolve();
+    
+     
+        }
+ 
+}
+```
+
+
+
+## Problem 2 - Turn on Leaf
+
+Clara enters a maze where she must find the leaf that is positioned deep in the maze's centre. The initial configuration of her world looks similar to Figure 1.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-turn-on-leaf-Q9WGKRKivJPS3nwod/Figure_2_2__1.png)
+
+**Figure 1.**
+
+Clara must navigate her way to the centre of the maze. While travelling through the maze she is guided by the leaves that someone left as clues for her. These leaves are indicators that Clara must turn right when she encounters them. So, her approach to navigation is as follows: Clara must move forward until she finds a leaf. Once the leaf is found she must eat it and turn right. She must continue until she finds a leaf that is surrounded by trees from all sides apart from the side where she came from. Clara's objective is to discover this leaf and once she does, she must eat it and stop her navigation. The result of executing your program must look similar to Figure 2.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-turn-on-leaf-Q9WGKRKivJPS3nwod/Figure_2_2__2.png)
+
+**Figure 2.**
+
+Your solution must be generic and has to work with all supplied example worlds. This means that before submitting you must test your code with all supplied worlds and it must correctly work in all of those. You should also aim at making sure that the code would work with all similar worlds with similar properties (beyond the provided examples).
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); turnRight(); treeLeft(); treeRight(); treeFront(); onLeaf(); putLeaf(); removeLeaf(); stop();
+   JAVA
+   if, else */
+
+class MyClara extends Clara {
+    /**
+     * In the 'act()' method you can write your program for Clara 
+     */
+
+
+    void act() {
+
+        if (onLeaf()) {
+            if (treeRight() && treeLeft() && treeFront())
+            {
+                removeLeaf();
+            }
+            else
+            {
+                turnRight();
+                removeLeaf();
+            }
+        }
+        else
+        {
+            if (!treeFront())
+            {
+                move();
+            }
+        }
+
+    }
+}
+```
+## Problem 2_3
+
+n problem 3 your task is to make Clara move through the middle row in the world shown in Figure 1. and place a leaf in any cell that has a tree either above or below this cell. Clara has to stop when she detects that there is a tree in front of her. The result should look similar to Figure 2.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-leaf-on-any-tree-wtwXrLpPzJbxBTLmH/Figure_2_3__1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-leaf-on-any-tree-wtwXrLpPzJbxBTLmH/Figure_2_3__2.png)
+
+**Figure 2.**
+
+Starting from this problem, there will be restrictions on commands that you can use in your solutions. Those restrictions will appear at the top of MyClara file as shown in Figure 3. In this problem you are only allowed to use commands shown in Figure 3. Notice that you are not allowed to use turnLeft() and turnRight() commands.
+
+![Figure 3](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-leaf-on-any-tree-wtwXrLpPzJbxBTLmH/Figure__2__3.png)
+
+**Figure 3.**
+
+Your solution must be generic and has to work with all supplied example worlds. This means that before submitting you must test your code with all supplied worlds and it must correctly work in all of those. You should also aim at making sure that the code would work with all similar worlds with similar properties (beyond the provided examples).
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move(); treeLeft(); treeRight(); treeFront(); onLeaf(); putLeaf(); removeLeaf(); stop();
+   JAVA
+   if, else */
+
+class MyClara extends Clara {
+    /**
+     * In the 'act()' method you can write your program for Clara 
+     */
+    void act() {
+        // TODO: Write your code below
+       
+       if((treeRight() || treeLeft())){
+           putLeaf();
+       }
+      if(!treeFront()){
+       move();
+      }
+      else{
+          stop();
+      }
+    }
+}
+```
+
+## Problem 4 - Bonus (Leaves on the Edge)
+
+Clara has approached a forest as shown in Figure 1. Your goal is to make Clara walk around the entire forest and mark its perimeter by surrounding this forest with leaves as shown in Figure 2.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-bonus-leaves-on-the-edge--8rzLYcmnj7ecXkBpQ/Figure__2__4__1.png)
+
+**Figure 1.**
+
+You are not allowed to place leaves on top of leaves, so if after putting a leaf down and stepping away from it if Clara discovers that she stands on a leaf - it should be a hint for you that she is finished with marking the perimeter.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-bonus-leaves-on-the-edge--8rzLYcmnj7ecXkBpQ/Figure_2_5__2.png)
+
+**Figure 2.**
+
+Your solution must be generic and has to work with all supplied example worlds. This means that before submitting you must test your code with all supplied worlds and it must correctly work in all of those. You should also aim at making sure that the code would work with all similar worlds with similar properties (beyond the provided examples).
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); turnRight(); treeLeft(); treeRight(); treeFront(); onLeaf(); putLeaf(); removeLeaf(); stop();
+   JAVA
+   if, else */
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'act()' method you can write your program for Clara 
+     */
+    void act() {
+        // TODO: Write your code below
+
+        // If we are near the water turn right
+        if(!treeFront() && !treeLeft() && !treeRight()){
+            turnRight();
+        }
+
+        //If there is a tree in front we'll turn left
+         if(treeFront()){
+            turnLeft();
+        }
+
+        //given those conditions, if the path is clear we will walk
+        if(!treeFront()){
+            move();
+        }
+        else{
+            stop();
+        }
+
+        //This will ge clara around the perimeter so now if she steps
+            //on a leaf she would be finished
+        
+       
+        if(!onLeaf()){
+            putLeaf();
+        } else{
+            stop();
+        }
+        
+
+        
+       
+    }
+}
+```
+
+
+
+# Practical 3
+
+## Problem 1 - Climbing Stairs
+
+Clara likes exercising and one of her favourite games is to climb stairs (made of trees, of course). In this Problem you have to help Clara to climb the set of stairs shown in Figure 1. In order to do so, she must follow the trajectory represented by a dotted line showed in Figure 2.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/Problem-1-Climbing-Stairs-Advanced-TJTgapZFM4zajm8iX/Figure_3_1__1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/Problem-1-Climbing-Stairs-Advanced-TJTgapZFM4zajm8iX/Figure_3_1__2.png)
+
+**Figure 2.**
+
+Your program should be generic enough to handle any set of stairs. For testing purposes an additional world is supplied. Your code must run in both worlds with no modification.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'run()' function you can write your program for Clara 
+     */
+    void climbSingleStep(){ //This will climb one Step
+    turnLeft();
+    move();
+    turnRight();
+    move();
+    }
+
+    void run() {
+        while(treeFront()){
+            climbSingleStep();
+        }
+    }
+}
+```
+
+## Problem 2 - Filling Gaps
+
+The roadways (normally made of trees) in Clara’s world often seem to be in need of repair, and it might be fun to see if Clara can fill potholes in her abstract world. For example, imagine that Clara is standing on the “road” shown in Figure 1, one corner to the left of a pothole in the road. Clara’s job is to fill the hole with a leaf and proceed to the next corner. Figure 2 illustrates how the world should look after the program execution.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-filling-gaps-KSJMYZy7ZBbMCBzDz/Figure_2_2_1_.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-filling-gaps-KSJMYZy7ZBbMCBzDz/Figure_3_2_2_.png)
+
+**Figure 2.**
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'run()' function you can write your program for Clara 
+     */
+    void run() {
+    
+    while(!treeFront()){
+        move();
+        if(!treeRight()){
+            turnRight();
+            move();
+           // if(!onLeaf()){
+             //   putLeaf();
+            //}
+            !onLeaf() ? putLeaf() : null; ;
+            turnLeft();
+            turnLeft();
+            move();
+            turnRight();
+        }
+    }
+    }
+}
+```
+
+## Problem 3  - Solving a Maze
+
+In this Problem you will teach Clara some advanced navigation skills. In her pursuit of leafy happiness Clara often has to escape from a maze. In Clara’s world, a maze might look like what is seen in Figure 1.
+
+A tasty juicy leaf always marks the exit to the maze. So Clara’s job is to navigate the corridors of the maze until she finds the leaf indicating the exit. Once this happens – Clara is finally allowed to eat the leaf and stop her search. The result of this is shown in Figure 2. The program you create must be general enough to solve any maze in Clara’s world, and not just the one pictured here. You can test this by opening all example worlds supplied with this exercise and making sure that Clara can solve all the mazes without modifying the code for every specific case.
+
+There are several strategies you could use for solving a maze. When Theseus needed to escape from the Labyrinth of Crete, he adopted—at the suggestion of King Minos’s daughter Ariadne, whom Theseus promptly abandoned on the next island he reached—the strategy of unwinding a ball of string as he explored the maze. You could devise a similar strategy for Clara, in which leaves serve the same function.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/Problem-3-Solving-a-Maze-WvCbgaWd5zeq66Dms/Figure_3_3__1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/Problem-3-Solving-a-Maze-WvCbgaWd5zeq66Dms/Figure_3_3__2.png)
+
+**Figure 2.**
+
+The mazes in Clara’s world, however, are rather simple and she might also confuse the leaf that marks the exit with one of those she deposits during search. So the approach of Theseus is not an efficient choice for this exercise. Instead, you should use a simpler strategy called the right-hand rule, in which you begin by putting your right hand on the adjacent wall and then go through the maze without ever taking your hand off the wall. Another way to express this strategy is to proceed through the maze one step at a time, always taking the rightmost available path.
+
+Clara’s resulting orientation in the end is not important. But what is important is that in the end she eats the leaf and stops at the same location as where she found the leaf.
+
+The same result can be achieved by taking the leftmost available path (instead of going right), but it is important that in your solution you are taking the rightmost available path instead.
+
+You can count on the fact that there is only one leaf present in each of the mazes.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'run()' function you can write your program for Clara 
+     */
+    void run() {
+        
+       while(!onLeaf()){
+        
+        if(!treeFront()){
+            move();
+            if(!treeLeft()){
+                turnLeft();
+                move();
+            }
+        } else if (!treeLeft()) 
+        {
+            turnLeft();
+            move();
+        } else if (!treeRight())
+        {
+            turnRight();
+            move();
+        } else 
+        {
+            turnLeft();
+            turnLeft();
+        }
+        
+        
+        
+        
+        
+        }
+        removeLeaf();
+       
+
+
+    }
+}
+```
+
+## Problem 4 - Street Centre
+
+As an exercise in solving algorithmic problems, program Clara to place a single leaf at the centre of 1st Street. For example, if Clara starts in the world shown in Figure 1, after execution of your program the world should appear as shown in Figure 2.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/Problem-4-Bonus-Problem-8Tpwm5fzJDo5SASne/Figure_3_4__1.png)
+
+**Figure 1.**
+
+Note that the final configuration of the world should have only a single leaf at the midpoint of 1st Street (the edges of the world populated with trees are not considered to be a streets/avenues in this scenario). Along the way, Clara is allowed to place additional leaves wherever she wants to, but must pick them all up again before she finishes. You are required to develop a general-purpose solution that works with all the supplied worlds. In solving this problem, you may count on the following facts about the world:
+
+- Clara starts at 1st Avenue and 1st Street, facing east, with an infinite number of leaves in her bag.
+- The initial state of the world includes no interior trees or leaves.
+- There is always only one street available for Clara to move on.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/Problem-4-Bonus-Problem-8Tpwm5fzJDo5SASne/Figure_3_4__2.png)
+
+**Figure 2.**
+
+Your program, moreover, can assume the following simplifications:
+
+- If the width of the world is odd, Clara must put the leaf in the central square. If the width is even, Clara may drop the leaf on either of the two central squares.
+
+There are many different algorithms you can use to solve this problem. The interesting part of this assignment is to come up with a strategy that works. Please be aware that you are explicitly prohibited to use variables for solving this problem! This means that Clara is not allowed to memorise anything (e.g. how many steps she made or how wide the street is). You must solve this problem by moving around and putting or removing leaves.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+
+class MyClara extends Clara {
+    /**
+     * In the 'run()' function you can write your program for Clara 
+     */
+    void run() {
+        // TODO: Write your code below
+
+        // So let's fill it all up with leaves first
+        while (!onLeaf()) {
+            putLeaf();
+            if (!treeFront()) {
+                move();
+            } else {
+                turnRight();
+                turnRight();
+            }
+        }
+
+        //Remove the outside leaves and move in
+        while (onLeaf()) {
+            if (!treeFront()) {
+                move();
+                if (!onLeaf()) {
+                    turnRight();
+                    turnRight();
+                    move();
+                    removeLeaf();
+                    move();
+                    if (!onLeaf()) {
+                        turnRight();
+                        turnRight();
+                        move();
+                    }
+                }
+            } else {
+                removeLeaf();
+                turnRight();
+                turnRight();
+                move();
+            }
+        }
+        putLeaf();
+    }
+}
+```
+
+
+
+# Practical 4 - Decomposition
+
+## Fixing Columns
+
+Clara’s world has been shattered by an earthquake and to avoid any further damage she must quickly repair it. In particular, Clara is to repair a set of arches where some of the stones (represented by leaves, of course) are missing from the columns supporting the arches, as shown in Figure 1.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-fixing-columns-left-to-right-rDF3nDMTLyNuWiXtj/Figure_4_3_1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-fixing-columns-left-to-right-rDF3nDMTLyNuWiXtj/Figure_4_3_2.png)
+
+**Figure 2.**
+
+Your program should work on the world shown in Figure 1, but it should be generic enough to handle any world that meets certain basic conditions as outlined at the end of this problem. There are several example worlds in the starter folder, and your program should work correctly with all of them.
+
+When Clara is done, the missing stones in the columns should be replaced by leaves, so that the final picture resulting from the world shown above would look like Figure 2.
+
+It is extremely important for this problem to only use the permitted commands as described in the header of the main file (MyClara.java). **It is explicitly prohibited to use `treeFront()`, `treeLeft()` and `treeRight()` methods**. Clara may count on the following facts about the world:
+
+- Clara starts at 1st Avenue and 1st Street, facing east, with an infinite number of leaves in her bag.
+- The columns are exactly four units apart, on 1st, 5th, 9th avenue, and so forth.
+- All columns are of the same height and are always exactly 7 units tall.
+- Some of the corners in the column may already contain leaves representing stones that are still in place. Your program should not put a second leaf on these corners.
+- Towards the end of the first street and immediately to the right of the last column there is always a mushroom that can be sensed using mushroomFront() method.
+
+As usual, your code must be generic to deal with all supplied example worlds.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+
+class MyClara extends Clara {
+   
+   /* Initialise the variables here so I don't forget later
+   * and wonder why the code won't compile */
+
+    int i; // for control variable (buildcol)
+    int j; // for control variable (moveaccross)
+    String unit;
+
+    /* A method to build a column by moving 5 steps up and filling
+    * empty boxes with leaves */
+
+    void colBuild() {
+        turnLeft();
+        for (i = 1; i <= 5; i = i + 1) {
+            if (!onLeaf()) {
+                putLeaf();
+            }
+            move();
+            if (!onLeaf()) {
+                putLeaf();
+            }
+        }
+        turnLeft();
+        turnLeft();
+         for (i = 1; i <= 5; i = i + 1) {
+            move();
+        }
+        turnLeft();
+    }
+
+ /* A method to take 4 steps over to the next column */
+
+void nextCol(){
+    for (j =1; j <= 4; j = j+1){
+        move();
+    }
+}
+    
+/* Build all the columns, while there is no mushroom,
+* build the column and move to the next column,
+* if you're in front of the mushroom build the final column*/
+
+    void run() {
+        while(!mushroomFront()){
+        colBuild();
+        nextCol();
+        }
+        colBuild();
+
+      //  factorSum(99,2);
+
+        // System.out.print(testVal(0));
+
+        unit = "days";
+       System.out.print(unit + "\n");
+
+
+
+
+    }
+
+     int testVal(int t) {
+            return (33*32 * t + 1);
+        }
+
+    public void factorSum(int b, int a) {
+        for (int ind = b ; ind > a ; ind--) {
+            S = S + (ind*(ind-1));
+        }
+
+        System.out.print("The Value is: " + S);
+    }
+
+    int S = 0;
+
+}
+```
+
+## Checkerboard - Bottom Left (Bonus)
+
+In this exercise, your job is to get Clara to create a checkerboard pattern of leaves inside an empty rectangular world (Figure 1.), and produce the world similar to what is shown in Figure 2.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-checkerboard-bottom-left-bonus-problem--hakojp9KntHmWGeqg/Figure_4_4__1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-checkerboard-bottom-left-bonus-problem--hakojp9KntHmWGeqg/Figure_4_4_2_.png)
+
+**Figure 2.**
+
+As this is the bonus problem – it has some interesting algorithmic issues. As you think about how you will solve the problem, you should make sure that your solution works with checkerboards that are different in size from the standard 8x8 checkerboard shown in the example. Odd-sized checkerboards are tricky, and you should make sure that your program generates the following pattern in a 7x7 world (see Figure 3).
+
+![Figure 3](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-checkerboard-bottom-left-bonus-problem--hakojp9KntHmWGeqg/Figure_4_4__2.png)
+
+**Figure 3.**
+
+Another special case you need to consider is that of a world which is only one column wide or one row high. The starter folder contains several sample worlds that test these special cases, and you should make sure that your program works for each of them. When solving this problem you must make sure to only use permitted commands as specified in the header of the main file. Multiple worlds supplied with this problem will help you to ensure that your solution is generic and applies to many worlds. Important note: you are not allowed to use variables for solving this problem (apart from for loop counters that are not to be used for measuring the dimensions of the world).
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+
+class MyClara extends Clara {
+    /**
+     * Write a method to move only if there's no tree in front
+     */
+
+    void smartMove() {
+        if (!treeFront()) {
+            move();
+        }
+    }
+
+    /* Write a method to fill a line with interspersed leaves */
+
+    void lineFill() { //fill columns
+
+        //If you're not on a leaf to begin with put one down.
+        turnLeft();
+        if (!onLeaf()) {
+            putLeaf();
+        }
+
+        /*While there are no trees in front put a leaf down 
+        * and take two steps forward, if already on a leaf
+        * just take two steps forward*/
+
+        while (!treeFront()) {
+            if (!onLeaf()) {
+                putLeaf();
+                smartMove();
+                smartMove();
+
+            }
+
+            if (onLeaf()) {
+                smartMove();
+                smartMove();
+            }
+        }
+
+        /* Turn around and move one step back, if there's no
+        * leaf there turn around and put in the final square, this is 
+        * like storing a variable without storing the variable and it's
+        * easier than trying to tweak the while-loop, it's not efficient
+        * but it works */
+        turnLeft();
+        turnLeft();
+        move();
+        if (onLeaf()) {
+            turnLeft();
+            turnLeft();
+            move();
+        } else {
+            turnLeft();
+            turnLeft();
+            move();
+            if (!onLeaf()) {
+                putLeaf();
+            }
+        }
+
+        /* Turn around and go back to the starting position, 
+        * this isn't efficient but it's simpler */
+
+        turnRight();
+        turnRight();
+        while (!treeFront()) {
+            move();
+        }
+        turnLeft();
+        smartMove();
+    }
+
+    /* A method to determine wether or not to offset the
+    * placement of leaves,
+        Test the square in the previous column,
+            if theres a leaf move right and up
+            if not just move right */
+
+    void offsetTest() { //Offset Test
+        turnLeft();
+        turnLeft();
+        if (!treeFront()) { //unecessary to test for tree, but safer
+            move();
+            turnLeft();
+            turnLeft();
+            if (onLeaf()) {
+                move();
+                turnLeft();
+                smartMove();
+                turnRight();
+            } else {
+                move();
+                // putLeaf();
+            }
+        }
+
+    }
+
+    /* A method to fill the leaves with a checkerboard patter,
+        * While not obstructed by trees
+            * fill the column with interspersed leaves and move back and over
+            * test the preceeding square for a leaf and offset accordingly */
+
+    void run() {
+        // TODO: Write your code below
+
+        while (!treeFront()) { // Build all the columns
+            lineFill();
+            offsetTest();
+        }
+        lineFill(); // Build the final column
+
+
+    }
+}
+```
+
+## Fix Leaf Trail
+
+Clara is interested in ancient Greek mythology. She has read a story about Theseus and Minotaur and decided to replicate it in her world. According to the original story, Theseus finds a way out of a labyrinth by using a ball of red thread that Theseus unrolled as he penetrated the labyrinth, which allowed him to find his way back out. You can read more about Theseus and Minotaur here: https://www.greekmyths-greekmythology.com/myth-of-theseus-and-minotaur/.
+
+In Clara's world the labyrinth looks similar to Figure 1. Instead of unrolling the thread Clara must put leaves everywhere she goes as she is looking for a way out.
+
+Unfortunately, there are some leaves that are already present in the labyrinth. Clara must ignore those and simply place the leaves in all cells on her path where no leaves are present.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-fix-leaf-trail-L55mK7AXGppyRafXo/Figure__4_1_1.png)
+
+**Figure 1.**
+
+In the labyrinth there is always a mushroom that represents the exit. Clara's objective is to walk to the mushroom and stop in front of it. Her way from the initial position to the mushroom must be marked with leaves as shown in Figure 2.
+
+The labyrinth is always of such a kind that Clara is able to get to the mushroom by simply walking forward until she encounters a tree in front of her that blocks her way. When there is a tree blocking her way she should turn left and continue walking. She would know that her objective is completed when Clara discovers that she is positioned in front of a mushroom ( mushroomFront() ). The result of executing your code should look similar to Figure 2.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-fix-leaf-trail-L55mK7AXGppyRafXo/Figure__4_1_2.png)
+
+**Figure 2.**
+
+Your solution must be generic and has to work with all supplied example worlds. This means that before submitting you must test your code with all supplied worlds and it must correctly work in all of those. You should also aim at making sure that the code would work with all similar worlds with similar properties (beyond the provided examples).
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   Clara commands:
+   move(); turnLeft(); turnRight(); treeLeft(); treeRight(); treeFront(); onLeaf(); putLeaf(); removeLeaf(); stop();
+   JAVA commands:
+   if, else, for, while, do, &&, ||, ! */
+
+class MyClara extends Clara {
+
+
+    /**
+     * Drop a leaf if there is no leaf
+     */
+
+    void leafDrop() {
+        if (!onLeaf()) {
+            putLeaf();
+        }
+    }
+
+    /* Move if you're not infront of anything and drop a leaf,
+        if you hit a tree, turn left
+    */
+
+    void fillMove() {
+        if (!treeFront() && !mushroomFront()) {
+            leafDrop();
+            move();
+            //  leafDrop(); //This is necessary to put the last leaf in
+        } else {
+            turnLeft();
+        }
+    }
+
+
+    /* A method to move through the maze and place leaves,
+     * While not at the mushroom drop leaves where necessary
+     * At the mushroom drop the final leaf*/
+    void run() {
+
+        while (!mushroomFront()) {
+            fillMove();
+        }
+        leafDrop(); //Put the final leaf in
+    }
+}
+```
+
+## Mini Pacman
+
+In this problem Clara plays a simplified version of the Pacman game. She is positioned on top of the first of a long trail of leaves (as shown in Figure 1). She must pick up all leaves and stop when all the leaves are collected (as shown in Figure 2) and the leaf trail is over. The leaf trail always ends with a tree.
+
+The most important characteristics of your solution are:
+
+- There must be no leaves after program stops running
+- Leaves must be removed in correct order starting with the leaf under Clara and ending with the leaf next to a tree
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-mini-pacman-7nsnX9XMk5bZwkDLj/Figure_4_2__1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-mini-pacman-7nsnX9XMk5bZwkDLj/Figure_4_2__2.png)
+
+**Figure 2.**
+
+Your program should be generic enough to handle any combination of leaves located next to one another in any configuration. Example worlds supplied with this problem will help you to test your code.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+   
+class MyClara extends Clara { 
+    /**
+     * Turn around by doing two left turns
+     */
+    
+    void turnAround(){
+        turnLeft();
+        turnLeft();
+    }
+
+    /* A method to clear a line of leaves
+            if you're on a leaf, eat it and move forward
+                repeat until off leaves */
+
+    void clearLine(){
+        while(onLeaf()){
+            //removeLeaf();
+            if(!treeFront()){
+               removeLeaf();
+                move();
+            }
+        }
+    }
+
+    /* A method to return to the previous square */
+
+    void moveBack(){
+        turnAround();
+        move();
+      }
+
+    /* A method to hunt for the next leaf
+        Move one step to the relative left, 
+            if that didn't put you on a leaf 
+            move back and to the next square over*/
+
+    void leafSearch(){
+        turnLeft();
+        move();
+        if(!onLeaf()){
+            moveBack();
+            move();
+        }
+       
+    }
+    
+    
+/* A method to remove the path of leaves,
+    while not in front of a tree and on leaves,
+        clear the line, when you fall of the trees
+            search for the next leaf */
+
+    void run() {
+
+        while(onLeaf() && !treeFront()){
+            clearLine();
+            if(!onLeaf() ){
+
+                moveBack();
+                leafSearch();
+            
+            }
+        }
+
+        
+
+
+    
+
+
+    // Remove the leaf before the tree
+    if(treeFront() && onLeaf()){
+        removeLeaf();
+    } 
+
+
+    }
+}
+```
+
+
+
+# Practical 5 - Variables
+
+## 1 Count Leaves and Steps
+
+This exercise is very similar to Practical 2, Problem 1, but has a new twist.
+
+Clara woke up inside a maze as shown in Figure 1. She must continue walking inside this maze and eat all the leaves she finds there until she reaches a dead end (a place where she is surrounded by trees from 3 sides). Figure 2 shows Clara at the dead end.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-count-leaves-and-steps-raD97rxcrar4LzwLg/Figure_5_1_1.png)
+
+**Figure 1.**
+
+The maze is always of such a kind that Clara is able to get to the dead end by simply walking forward and if there is a tree blocking her way she must turn right and then continue going forward. She has to stop at the dead end as shown in Figure 2. The result of executing your code should look similar to Figure 2.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-count-leaves-and-steps-raD97rxcrar4LzwLg/Figure_5_1_2.png)
+
+**Figure 2.**
+
+Once Clara reaches the dead end she must report on the number of leaves she has eaten and the number of steps she made. For example, in the first world she must say: "10 leaves, 31 steps". In all other worlds the numbers should correspond to the actual number of leaves eaten and steps made. The text you print must perfectly match the required output format "x leaves, y steps" including all the spaces and the coma or otherwise the system will not be able to validate it properly.
+
+Your solution must be generic and has to work with all supplied example worlds. This means that before submitting you must test your code with all supplied worlds and it must correctly work in all of those. You should also aim at making sure that the code would work with all similar worlds with similar properties (beyond the provided examples).
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); turnRight(); treeLeft(); treeRight(); treeFront(); onLeaf(); putLeaf(); removeLeaf();
+   JAVA
+   if, else, for, while, do, !, ||, && 
+   variables
+*/
+
+class MyClara extends Clara {
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+    int leaves = 0; //create an integer variable to count leaves
+    int steps = 0; //create an integer variable to count steps
+
+    /*
+     *Create a method to move only if there are no trees in front
+     * and count the steps */
+
+    void sMove() { //smove is short for smart move
+        if (!treeFront()) {
+            move();
+            steps++;
+        }
+    }
+
+    /* Create a method to pick up the leaf and count how many */
+
+    void leafPick() {
+
+        if (onLeaf()) {
+            removeLeaf();
+            leaves++;
+
+        }
+
+    }
+
+    /*Create a method to solve the maze*/
+
+    void mazeSolve() {
+        /* If not surrounded by trees then move while there
+         * is no tree in front
+         * Pick up and count leaves as you go
+         * when there is a tree in front turn right.
+         * but, only turn right if not surrounded by trees. */
+         
+        while (!(treeFront() && treeLeft() && treeRight())) {
+            while (!treeFront()) {
+                leafPick();
+                sMove();
+            }
+            if (!(treeFront() && treeLeft() && treeRight())) {
+                turnRight();
+            }
+            leafPick(); //get the last leaf
+        }
+
+    }
+
+
+    /* Solve the maze and print the output */
+
+    void run() {
+
+        mazeSolve();
+
+        System.out.println(leaves + " leaves, " + steps + " steps");
+
+
+
+
+    }
+}
+```
+
+
+
+## 2 Maze Run
+
+The aim of this exercise is to test your ability to work with **boolean variables** .
+
+Clara must find the exit from a maze. She is positioned at the very start of it, faces away from any trees and looks towards the path that would eventually take her to the exit as shown in Figure 1. The exit from the maze is marked with a mushroom.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-maze-run-Bj2xGNCBsQDk4fFkM/Figure_5_2_1.png)
+
+**Figure 1.**
+
+To help Calra with completing this task efficiently and also to feed her along the way some kind sole has placed a number of leaves around. These leaves were placed based on the following principles:
+
+- the leaves are only placed at the beginning of every corridor of the maze
+- the fact that there is a leaf at the beginning of the corridor indicates that at the end of it (when Clara hits a tree) she must turn right
+- if there is no leaf at the beginning of the corridor this means that at the end of this corridor Clara must turn left.
+
+Guided by these leaves Clara must find the exit and she must also eat all the leaves she encounters, as shown in Figure 2.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-maze-run-Bj2xGNCBsQDk4fFkM/Figure_5_2_2.png)
+
+**Figure 2.**
+
+Your solution must be generic and must work with all the supplied example worlds.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); turnRight(); treeLeft(); treeRight(); treeFront(); onLeaf(); putLeaf(); removeLeaf();
+   JAVA
+   if, else, for, while, do, !, ||, && 
+   variables
+*/
+
+class MyClara extends Clara {
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+    boolean LeafPick; //Initialise a Boolean Variable for leaves
+
+    /*Pick up and Remember if there was a Leaf at the beginning of the corridor*/
+
+    void pickLeaf() {
+        if (onLeaf()) {
+            removeLeaf();
+            LeafPick = true;
+        } else {
+            LeafPick = false;
+        }
+    }
+
+    /*Write a method to turn in the correct direction */
+
+    void dirTurn() {
+        if (LeafPick == true && !mushroomFront()) { //Right if there was a leaf
+            turnRight();
+        } else if (LeafPick == false && !mushroomFront()) {
+            turnLeft(); //Left otherwise, Never if theres a mushroom
+        }
+    }
+
+    /* Write a method to walk to the end of the corridor and check for the leaf */
+
+    void walkCorridorAndTurn() {
+        pickLeaf();
+        while (!treeFront() && !mushroomFront()) { //move until obstructed
+            move();
+        }
+        dirTurn();
+    }
+
+
+
+    void run() {
+
+
+        while (!mushroomFront()) {
+
+            walkCorridorAndTurn();
+
+        }
+
+
+
+
+
+
+    }
+}
+```
+
+
+
+## 3 Longest Step
+
+Here we continue with variable use. Clara is learning a new trade; she is about to become a carpenter. One of the tasks set out for her is to measure the length of the longest step in the set of stairs leading to the entry of her house. Apparently, the steps in her staircase are all different and she will later have to fix this problem. But for now she just has to measure them all and find the longest one.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-longest-step-TYw3yHKSbdfWuaMpC/Figure_5_3_1.png)
+
+**Figure 1.**
+
+Clara starts in the world as shown in Figure 1. She must move from west to east and once reaching the top right corner – she must present the value of the longest step in the staircase she has climbed. The outcome should resemble what is shown in Figure 2.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-longest-step-TYw3yHKSbdfWuaMpC/Figure_5_3_2.png)
+
+**Figure 2.**
+
+Clara has to measure the length of each step and print the result using the System.out.println() command. Your solution must be generic and work with all supplied example worlds. Your output should also perfectly match the format "longest step = x" in order for our system to be able to validate it properly.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); turnRight(); treeLeft(); treeRight(); treeFront(); onLeaf(); putLeaf(); removeLeaf();
+   JAVA
+   if, else, for, while, do, !, ||, && 
+   variables
+*/
+
+class MyClara extends Clara {
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+    int stepLength = 0; //Declare step length variable
+    int maxLength = 0; //Declare a variable to store max length
+
+    /*Write a method to move to the top of the step*/
+
+    void climb() {
+        turnLeft();
+        move();
+        turnRight();
+    }
+
+    /*Write a method to cound the length of the step*/
+
+    void walkCount() {
+        while (!treeFront()) {
+            move();
+            stepLength++;
+        }
+        // If the number of steps is larger than the preceeding replace it
+
+        if (stepLength > maxLength) {
+            maxLength = stepLength;
+        }
+
+    }
+
+    void run() {
+
+        while (!onLeaf()) { //The end is marked with a leaf so we can use that as our condition
+            stepLength = 0; //reset the counter
+            climb();
+            walkCount();
+        }
+       
+        removeLeaf();
+
+        System.out.println("longest step = " + maxLength);
+
+
+    }
+}
+```
+
+
+
+## 4 Checkerboard With Boolean
+
+Here we continue with variable use. Clara is learning a new trade; she is about to become a carpenter. One of the tasks set out for her is to measure the length of the longest step in the set of stairs leading to the entry of her house. Apparently, the steps in her staircase are all different and she will later have to fix this problem. But for now she just has to measure them all and find the longest one.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-longest-step-TYw3yHKSbdfWuaMpC/Figure_5_3_1.png)
+
+**Figure 1.**
+
+Clara starts in the world as shown in Figure 1. She must move from west to east and once reaching the top right corner – she must present the value of the longest step in the staircase she has climbed. The outcome should resemble what is shown in Figure 2.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-longest-step-TYw3yHKSbdfWuaMpC/Figure_5_3_2.png)
+
+**Figure 2.**
+
+Clara has to measure the length of each step and print the result using the System.out.println() command. Your solution must be generic and work with all supplied example worlds. Your output should also perfectly match the format "longest step = x" in order for our system to be able to validate it properly.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); turnRight(); treeLeft(); treeRight(); treeFront(); onLeaf(); putLeaf(); removeLeaf();
+   JAVA
+   if, else, for, while, do, !, ||, && 
+   variables
+*/
+
+class MyClara extends Clara {
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+    int stepLength = 0; //Declare step length variable
+    int maxLength = 0; //Declare a variable to store max length
+
+    /*Write a method to move to the top of the step*/
+
+    void climb() {
+        turnLeft();
+        move();
+        turnRight();
+    }
+
+    /*Write a method to cound the length of the step*/
+
+    void walkCount() {
+        while (!treeFront()) {
+            move();
+            stepLength++;
+        }
+        // If the number of steps is larger than the preceeding replace it
+
+        if (stepLength > maxLength) {
+            maxLength = stepLength;
+        }
+
+    }
+
+    void run() {
+
+        while (!onLeaf()) { //The end is marked with a leaf so we can use that as our condition
+            stepLength = 0; //reset the counter
+            climb();
+            walkCount();
+        }
+       
+        removeLeaf();
+
+        System.out.println("longest step = " + maxLength);
+
+
+    }
+}
+```
+
+
+
+## 5 Mushroom in Tunnel (BONUS)
+
+### Bonus Problem
+
+If you had previous programming experience – it is advisable to start with the bonus problem and see whether you can complete it. Students who didn’t have prior programming experience should only attempt the bonus problem after completing the regular problems.
+
+Clara is always on a lookout for new hobbies. Very recently she became a mushroom collector. Her task is to find a single mushroom in the world similar to the one shown in Figure 1 and push it so that it is eventually located on top of the leaf as shown in Figure 2. In order to push the mushroom it must be approached from behind and any movement forward while being behind the mushroom will result it being pushed forward.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-5-mushroom-in-tunnel-bonus--2mHWGH6RaXg5bXpWB/Figure_5_5_1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-5-mushroom-in-tunnel-bonus--2mHWGH6RaXg5bXpWB/Figure_5_5_2.png)
+
+**Figure 2.**
+
+This world of Clara has two chambers connected by a tunnel. Clara and the mushroom are located in the left chamber. In the right chamber there is a leaf. Clara must find the mushroom then push it into the chamber on the other side. Once on the other side, the mushroom is to be pushed onto the leaf.
+
+Clara always starts in the top left corner and the leaf is always in the bottom right corner of the second chamber. The mushroom, on the other hand, can be at an arbitrary position within the first chamber, but it is never located next to a tree. The tunnel connecting chambers is always of the same length (4), but it may start anywhere on the wall of the first chamber (apart from the top and bottom streets within it). Both chambers are identical in size.
+
+Test whether your solution is generic by moving the mushroom to a new position and starting multiple times. Also test with all supplied example worlds.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move(); turnLeft(); turnRight(); treeLeft(); treeRight(); treeFront(); onLeaf(); putLeaf(); removeLeaf();
+   JAVA
+   if, else, for, while, do, !, ||, && 
+   variables
+*/
+
+
+class MyClara extends Clara {
+    /**
+     * In the 'run()' method you can write your program for Clara 
+     */
+
+    /* Initialize variables */
+    int n; //Distance to the East North of the Mushroom
+    int s; //Distance to the East South of the Mushroom
+    int j; //Arbitrary for-loop counter
+    int e; //The required distance to travel East
+    int br; //Distance to the bridge, when mushroom is on an Eastern wall
+    int s2; //Distance to the southern wall in the second chamber
+
+    /* Turn around */
+    void turnAround() {
+        turnRight();
+        turnRight();
+    }
+
+    /* Move until obstructed */
+    void stickyMove() {
+        while (!treeFront() && !mushroomFront()) {
+            move();
+        }
+    }
+
+    /* Scan the lines to find the musrhoom */
+    void findMushroom() {
+        while (!mushroomFront()) {
+            stickyMove();
+            if (!mushroomFront()) {
+                turnAround();
+                stickyMove();
+                turnAround();
+                turnRight();
+                if (!mushroomFront()) { //So you don't push the musrhoom while looking for it
+                    move();
+                    turnLeft();
+                }
+            }
+        }
+    }
+
+    /* Move above the Mushroom */
+    void moveOver() {
+        turnLeft();
+        move();
+        turnRight();
+        move();
+    }
+
+    /* Move underneath the mushroom */
+    void moveUnder() {
+        turnRight();
+        move();
+        turnLeft();
+        move();
+    }
+
+    /* A Method to find the minimum value because I don't think we
+     * can import methods can we? */
+
+    int minval(int a, int b) {
+        int c;
+        if (a < b) {
+            c = a;
+        } else {
+            c = b;
+        }
+        return c;
+    }
+
+    /* A method to measure how from the eastern wall the mushroom is, above */
+    void measureAbove() {
+        moveOver();
+        n = 0; //reset the EastcounterNorth just in case
+        while (!treeFront()) {
+            move();
+            n++;
+        }
+        turnAround();
+        for (j = 0; j <= n; j++) {
+            move();
+        }
+        turnLeft();
+        move();
+        turnLeft();
+        
+    }
+
+    /* Measure how far from the eastern wall the mushroom is, below */
+
+
+    void measureBelow() {
+
+        moveUnder();
+
+        s = 0; //reset the EastcounterSouth just in case
+        while (!treeFront()) {
+            move();
+            s++;
+        }
+        turnAround();
+        for (j = 0; j <= s; j++) {
+            move();
+        }
+        turnRight();
+        move();
+        turnRight();
+        
+    }
+
+
+    /* A method to measure how far East to push the mushroom 
+      It isn't necessary to look out for trees, the mushroom
+      must be centred because it can't be pulled*/
+    void measureEast() {
+        // reset the variables mise `en place
+        s = 0;
+        e = 0;
+        n = 0;
+
+        //Measure North Distance (only if not obstructed)
+        if (!treeLeft()) {
+            measureAbove();
+        }
+
+        //Measure South Distance (only if not obstructed)
+        if (!treeRight()) {
+            measureBelow();
+        }
+
+        //This is a mess but it is in order to assign the correct value to the eastern distance
+
+        if (n == 0 && s != 0) {
+            e = s;
+        } else if (n != 0 && s == 0) {
+            e = n;
+        } else if (n == 0 && s == 0) {
+            e = 0;
+        } else {
+            e = minval(n, s);
+        }
+
+    }
+
+    /* A method to push the Mushroom the required steps East */
+    void pushEast() {
+        for (j = 0; j < e; j++) {
+            move();
+        }
+    }
+
+
+    /* A method to return how many steps the bridge is below, if it is below */
+    void bridgeLookBelow() {
+        s = 1; //because you have to count the move over
+        moveUnder();
+        while (treeFront() && !treeRight()) {
+            turnRight();
+            move();
+            turnLeft();
+            s++;
+        }
+        if (!treeFront()) {
+            br = -s; //negative to move from absvalue to directional
+        }
+        //Return to the front of the mushroom
+        turnLeft();
+        for (j = 1; j < s; j++) {
+            move();
+        }
+        moveOver();
+        turnRight();
+
+
+    }
+
+    /* A method to return how many steps the bridge is above, if it is above
+     * This will only work when the mushroom is on an eastern wall */
+
+    void bridgeLookAbove() {
+        n = 1;
+        moveOver();
+        while (treeFront() && !treeLeft()) {
+            turnLeft();
+            move();
+            turnRight();
+            n++;
+        }
+        if (!treeFront()) {
+            br = n;
+        }
+
+        // Return to the front of the mushroom
+        turnRight();
+        for (j = 1; j < n; j++) {
+            move();
+        }
+        moveUnder();
+        turnLeft();
+
+
+
+
+    }
+
+    /* A method to look for and find the bridge, assign the bridge value to `br`, pos/neg like a cartesian plane*/
+
+    void findBridge() {
+        br = 0; //reset the bridge counter
+
+        //Only look if unobstructed       
+        if (!treeRight()) {
+            bridgeLookBelow();
+        }
+
+        if (!treeLeft()) {
+            bridgeLookAbove();
+        }
+    }
+
+    /* A method to push the mushroom to the bridge, after using findBridge() to determine the distance */
+
+
+    void push2Bridge() {
+
+        // If the value is negative push it down
+        if (br < 0) {
+            moveOver();
+            turnRight();
+            for (j = -1; j >= br; j--) {
+                move();
+            }
+
+            //Move back to the eastern side of the mushroom
+            moveUnder();
+            turnLeft();
+
+        }
+
+        // If it's positive push it up (remember we don't have to worry about walls, the instruction said it would be offset
+
+        if (br > 0) {
+
+            moveUnder();
+            turnLeft();
+            for (j = 1; j <= br; j++) {
+                move();
+            }
+
+            //Move back to the eastern side of the mushroom
+            moveOver();
+            turnRight();
+        }
+
+
+
+    }
+
+    void moveOverBridge() {
+        for (j = 0; j < 6; j++) {
+            move();
+        }
+    }
+
+    /*When the mushroom is on the eastern wall in the right chamber, measure how far south the bottom wall is*/
+
+    void measureSouthDistance() {
+        turnRight();
+        s2 = 0;
+        while (!treeFront()) {
+            move();
+            s2++;
+        }
+        turnAround();
+        for (j = 0; j < s2; j++) {
+            move();
+        }
+        turnRight();
+    }
+
+    /*Use the value found in measureSouthDistance() to push the mushroom to the wall */
+    void pushSouth() {
+        if (s2 != 0) { //only push it south if necessary.
+            moveOver();
+            turnRight();
+            for (j = 0; j < s2; j++) {
+                move();
+            }
+        }
+    }
+
+    void run() {
+        // TODO: Write your code below
+
+        /////////////
+        //Chamber 1///
+        /////////////
+        findMushroom(); //find the mushroom
+        measureEast(); //measure how far east to push it
+        pushEast(); // push it east appropriately
+        findBridge(); // find where the bridge is
+        push2Bridge(); // line the mushroom up with the bridge
+        moveOverBridge(); //push the mushroom over the bridge
+
+        /////////////
+        //Chamber 2///
+        /////////////
+
+        measureEast(); //measure how far east to push the mushroom
+        pushEast(); // push the mushroom the appropriate distance
+        measureSouthDistance(); //measure how far south the push the mushroom
+        pushSouth(); //push the mushroom the appropriate distance south
+
+
+
+    }
+}
+```
+
+
+
+# Practical 6 - Arithmetic Operations & Arrays
+
+## 1 Baking a Cake
+
+In this exercise Clara will impersonate the Red Riding Hood and has a task to bake a cake for her grandmother. Naturally, all cakes in Clara’s world are made out of leaves.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-baking-a-cake-DpJy5AjywCusGEWeu/Figure__6_1.png)
+
+**Figure 1.**
+
+You will be presented with a scenario shown in Figure 1. Your task is to first request the user to enter two integer numbers (cake width and cake height). Notice two new methods in Clara’s vocabulary and have a look at the example for computing an average of two numbers that was discussed in Lecture 6, to see how these methods are used for entering a number from keyboard. These numbers must be validated so that the cake fits inside Clara’s world. If any of the numbers does not satisfy this requirement – user must re-enter the corresponding number. When the numbers are correctly entered – Clara must draw a cake of the width and height as entered by the user. Figure 2 shows an example of the resulting cake that is 18 cells wide and 5 cells high.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-baking-a-cake-DpJy5AjywCusGEWeu/Figure_6_1_2.png)
+
+**Figure 2.**
+
+There is only one Clara world you have to deal with for this exercise, as shown in Figure 1. In this world Clara always starts on the second street and in the same initial position as shown in Figure 1.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+
+class MyClara extends Clara {
+    /**
+     * In the 'run()' function you can write your program for Clara 
+     */
+    int width = 0;
+    int height = 0;
+
+    void run() {
+        // TODO: Write your code below
+        buildCake();
+
+    }
+
+    // Method to build the cake by looping the row build method
+
+    void buildCake() {
+        askWidth();
+        askHeight();
+
+        for (int h; h < height; h++) {
+            buildRow();
+
+            if ((h % 2) == 1) {  //turn east on odd repetitions
+                repositionEast();
+            } else {
+                repositionWest();
+            }
+        }
+    }
+
+//Method to build the row by placing a leaf and moving as many times as the width specifies
+    void buildRow() {
+        //int width = askWidth();
+        for (int w = 1; w <= width; w++) {
+            putLeaf();
+            move();
+
+        }
+    }
+
+    // Method to reposition East
+
+    void repositionWest() {
+        turnLeft();
+        move();
+        turnLeft();
+        move();
+    }
+
+    //Method to reposition West
+
+    void repositionEast() {
+        turnRight();
+        move();
+        turnRight();
+        move();
+    }
+
+    /*
+     * Prompt the user for the dimensions of the cake
+     */
+
+    void askWidth() {
+
+        //Initialise the dimensions
+
+
+        // Get the Width Value
+        width = readInt("Enter the desired width between 2 and 18");
+
+        //Test and loop the width value
+        while (!(2 <= width && width < 18)) {
+            width = readInt("The Width must be between 2 and 18 otherwise it won't render correctly, please enter another value for width");
+        }
+
+
+        //System.out.print("Cake will be a " + rows + " X " + cols + " matrix");
+    }
+
+    void askHeight() {
+
+        //Initialise the dimensions
+
+
+        // Get the Width Value
+        height = readInt("Enter the desired height between 2 and 13");
+
+        //Test and loop the width value
+        while (!(1 <= height && height <= 13)) {
+            height = readInt("The height must be between 1 and 13 otherwise it won't render correctly, please enter another value for height");
+        }
+
+
+        //System.out.print("Cake will be a " + rows + " X " + cols + " matrix");
+    }
+}
+```
+
+## 2 Candles on a Cake
+
+Clara is a perfectionist and always tries to improve every aspect of her job. As a cake maker, she is not entirely satisfied with the cake she baked for Problem 1. This time she wants to add candles to make it look more interesting.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-candles-on-cake-EzDyFhuo2MrCfzKMp/Figure__6_1.png)
+
+**Figure 1.**
+
+The initial configuration of Clara’s world is shown in Figure 1. Similar to problem 1, she must request the width and height of the cake from the user. Once the width and height are entered correctly, Clara must bake the cake as before, but then she also has to add a number of candles so that the entire cake is covered with them as shown in Figure 2.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-candles-on-cake-EzDyFhuo2MrCfzKMp/Figure_6__2.png)
+
+**Figure 2.**
+
+The candles on the cake are 3 cells tall and must be located with 1 cell interval between them. The number of candles must be automatically calculated depending on the width of the cake.
+
+Note, that the range of acceptable height for the cake base will change because now not only the base, but also the candles must fit within Clara’s world. So you must modify your validation accordingly.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+   
+class MyClara extends Clara { 
+     /**
+     * In the 'run()' function you can write your program for Clara 
+     */
+    int width = 0;
+    int height = 0;
+
+    void run() {
+        // TODO: Write your code below
+        buildCake();
+        addCandles();
+
+    }
+
+    // Method to add candles on top
+
+    void addCandles(){
+        System.out.print("Build" + width/2 + "candles");
+        for(int i=0; i < width/2; i++){
+            move(); 
+
+            if((height % 2) == 0){    //odd height means facing west
+                turnLeft();
+            } else {
+                turnRight();
+            }
+
+            buildCandle();
+
+            if((height % 2) == 0){    //odd height means facing west
+                turnLeft();
+            } else {
+                turnRight();
+            }
+
+            move();
+        }
+    }
+
+    // Method to build a candle
+    
+    void buildCandle(){
+        for(int i = 0 ; i < 3; i++){
+            putLeaf();
+            move();
+        }
+        turnAround();
+        for(int i = 0; i < 3; i ++){
+            move();
+        }
+
+    }
+
+    // Method to turn around by turning left twice
+
+    void turnAround(){
+        turnLeft();
+        turnLeft();
+    }
+
+    // Method to build the cake by looping the row build method
+
+    void buildCake() {
+        askWidth();
+        askHeight();
+
+        for (int h; h < height; h++) {
+            buildRow();
+
+            if ((h % 2) == 1) {  //turn east on odd repetitions
+                repositionEast();
+            } else {
+                repositionWest();
+            }
+        }
+    }
+
+//Method to build the row by placing a leaf and moving as many times as the width specifies
+    void buildRow() {
+        //int width = askWidth();
+        for (int w = 1; w <= width; w++) {
+            putLeaf();
+            move();
+
+        }
+    }
+
+    // Method to reposition East
+
+    void repositionWest() {
+        turnLeft();
+        move();
+        turnLeft();
+        move();
+    }
+
+    //Method to reposition West
+
+    void repositionEast() {
+        turnRight();
+        move();
+        turnRight();
+        move();
+    }
+
+    /*
+     * Prompt the user for the dimensions of the cake
+     */
+
+    void askWidth() {
+
+        //Initialise the dimensions
+
+
+        // Get the Width Value
+        width = readInt("Enter the desired width between 2 and 18");
+
+        //Test and loop the width value
+        while (!(2 <= width && width <= 18)) {
+            width = readInt("The Width must be between 2 and 18 otherwise it won't render correctly, please enter another value for width");
+        }
+
+
+        //System.out.print("Cake will be a " + rows + " X " + cols + " matrix");
+    }
+
+    void askHeight() {
+
+        //Initialise the dimensions
+
+
+        // Get the Width Value
+        height = readInt("Enter the desired height between 2 and 11");
+
+        //Test and loop the width value
+        while (!(2 <= height && height <= 11)) {
+            height = readInt("The height must be between 2 and 11 otherwise it won't render correctly, please enter another value for height");
+        }
+
+
+        //System.out.print("Cake will be a " + rows + " X " + cols + " matrix");
+    }
+}
+```
+
+## 3 Candles for Age
+
+In Problem 2 Clara has learned how to put candles on the cake, but then she realised that it is better to somehow associate the candles with the age of her grandmother. As her grandmother is quite old, having one candle represent one year of her age is not practical, so Clara decides on the following strategy: she will put one candle for each decade of her grandmother’s age and will make the length of each candle equal to the number of years over the last decade.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-candles-for-age-vJyLA7ugK4X9D4qTg/Figure__6_1.png)
+
+**Figure 1.**
+
+Figure 1 shows the initial setup: Clara draws the base of the cake, which is always 18 cells wide and 4 cells tall. When the base is finished, she asks the user to enter the age of the grandmother. Once the age is correctly entered, Clara will add candles as shown in Figure 2. Here user has entered 77, thus Clara creates 7 candles and makes them 7 cells high (77– 7*10) = 7. For cases when the number of years over the last decade is 0 (e.g. 50, 60, 70, 80), Clara must draw candles of height 1.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-3-candles-for-age-vJyLA7ugK4X9D4qTg/Figure__6_3.png)
+
+**Figure 2.**
+
+Clara wants her cake to look aesthetically pleasing, so she always ensures that the candles are positioned exactly in the middle of the cake as shown in Figure 2.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+
+class MyClara extends Clara {
+    /**
+     * In the 'run()' function you can write your program for Clara 
+     */
+    int age = 0;
+
+    void run() {
+        // TODO: Write your code below
+        buildCake();
+        addCandles();
+        printOut();
+
+    }
+
+    void addCandles() {
+        askage();
+        centreCandles();
+        for (int i = 0; i < age / 10; i++) {
+            move();
+            turnLeft();
+            buildCandle();
+            turnLeft();
+            move();
+        }
+    }
+
+    // A method to ask age
+    void askage() {
+        age = readInt("What is the age of the grandmother?, enter a number between 30 and 99");
+        while (!(30 <= age && age <= 99)) {
+            age = readInt("The age must be between 30 and 99");
+        }
+
+    }
+
+    void centreCandles() {
+        int overHang = 18 - (age * 2 / 10 - 1);
+        int offset = overHang / 2;
+        for (int i = 0; i < offset; i++) {
+            move();
+        }
+    }
+
+
+    // Method to build a candle
+
+    void buildCandle() {
+        int residue = age % ((age / 10) * 10); //No need to round because integer type drops decimal
+        if(residue == 0){
+            residue = 1;
+        } // make 0's as a 1 so a candle is still displayed
+        for (int i = 0; i < residue; i++) {
+            putLeaf();
+            move();
+        }
+        turnAround();
+        for (int i = 0; i < residue; i++) {
+            move();
+        }
+
+    }
+
+    // Method to turn around by turning left twice
+
+    void turnAround() {
+        turnLeft();
+        turnLeft();
+    }
+
+
+
+    // Method to build the cake by looping the row build method
+
+    void buildCake() {
+
+        for (int h; h < 4; h++) {
+            buildRow();
+
+            if ((h % 2) == 1) { //turn east on odd repetitions
+                repositionEast();
+            } else {
+                repositionWest();
+            }
+        }
+    }
+
+    //Method to build the row by placing a leaf and moving as many times as the width specifies
+    void buildRow() {
+        //int width = askWidth();
+        for (int w = 1; w <= 18; w++) {
+            putLeaf();
+            move();
+
+        }
+    }
+
+    // Method to reposition East
+
+    void repositionWest() {
+        turnLeft();
+        move();
+        turnLeft();
+        move();
+    }
+
+    //Method to reposition West
+
+    void repositionEast() {
+        turnRight();
+        move();
+        turnRight();
+        move();
+    }
+
+    void printOut() {
+        System.out.println(myString());
+    }
+
+    public static String myString() {
+        String myoutput = "This is the test";
+        return  myoutput;
+    }
+
+
+
+}
+```
+
+## Working with Arrays
+
+As usual, Clara is chasing leafs and the case presented in Figure 1 appears to be rather simple. But the problem with this case is that Clara is affected by gravity in this world and can only reach this leaf by climbing stairs. So, your task is to build those stairs for Clara as shown in Figure 2. Once the stairs are built – you need to make Clara climb the stairs, collect the leaf at the top and return to the original position.
+
+As you might recall, Clara didn’t have a dedicated method for placing trees in the world. But now there is a new method: addTree(int x, int y). This method allows you to add a tree at a specific coordinate (x, y) inside Clara’s world.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-working-with-arrays-jsKaR8nupAv7sigZ3/Figure_6_4_1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-4-working-with-arrays-jsKaR8nupAv7sigZ3/Figure_6_4_2.png)
+
+**Figure 2.**
+
+A correct solution to this problem would follow such steps:
+
+1. Declare an array of type int[][];
+2. Initialise this array before first use by encoding the stairs, where ‘0’ means no tree and ‘1’ means tree present;
+3. Parse the array inside the drawTriangle() method and create the stairs for Clara by using addTree() method for every ‘1’ you find inside the array you have created.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS 
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront,
+   addTree(x, y),
+   JAVA
+   if, while, for, do, &&, !, ||, variables, arrays
+*/
+
+class MyClara extends Clara {
+    
+
+    /* Declare the dimensions of the plane */
+
+    final int COLS = 11; //in terms of cardinality not including 0
+    final int ROWS = 10;
+
+    /**
+     * In the 'run()' function you can write your program for Clara 
+     */
+
+    void run() {
+
+        printArray(treeMap());      //Print the map to the Console
+        drawTriangle(treeMap());    //Draw in the trees
+        leafGrab();
+    }
+
+
+    /* Create the flag matrix and assign it to treemMap() for later use 
+     */
+
+    int[][] treeMap() {
+         int treeMap[][] = { {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                            {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+                            {0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0},
+                            {0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0},
+                            {0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0},
+                            {0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0},
+                            {0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0},
+                            {1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1}};
+        return treeMap;
+    }
+
+
+    /* A method to print the array, print from the 
+     bottom to the top so the layout 
+     is correct in the console
+     */
+
+    void printArray(int array[][]) {
+        for (int row = ROWS - 1; row >= 0; row--)
+        {
+            for (int col = 0; col < COLS; col++)
+                System.out.print(array[row][col] + " ");
+            System.out.println("");
+        }
+
+    }
+
+
+    /* A method to draw in the trees
+    Run a nested loop over the trees
+    using the 1/0 flag to indicate to the 
+    addTree() method as to whether or not to
+    place a tree.
+    be careful the x-axis value of a matrix is the column number,
+    this means that the (x,y) ordered pair is a different order from the
+    typical (row, column) matrix notation */
+
+    void drawTriangle(int[][] treemap) {
+
+        for (int rows = 0; rows < ROWS; rows++) {
+
+            for (int cols = 0; cols < COLS; cols++) {
+
+                if (treemap[rows][cols] == 1) {
+                    addTree(cols, rows); //be careful not to create the Transverse matrix, swap them
+                }
+            }
+        }
+    }
+
+    /* A method to Climb Stairs from West to East */
+
+    void leafGrab() {
+        int counter = 0;
+        while(treeFront()){
+            turnLeft();
+            move();
+            turnRight();
+            move();
+            counter++;
+        }
+        if(onLeaf()){
+            removeLeaf();
+        } else {System.out.print("I'm not on a leaf that's why i didn't pick it up");}
+        turnAround();
+        for(int i = 0; i < counter; counter--){
+            move();
+            turnLeft();
+            move();
+            turnRight();
+        }
+        turnAround();
+
+    }
+
+    /* A method to turnAround with two left turns*/
+        void turnAround(){
+            turnLeft();
+            turnLeft();
+        }
+
+}
+```
+
+
+
+## Firestart (BONUS)
+
+***I couldn't figure this one out so I didn't do it.***
+
+# Practical 7 - Bonus
+
+## Simple Array
+
+As usual, Clara is chasing leafs and the case presented in Figure 1 appears to be rather simple. But the problem with this case is that Clara is affected by gravity in this world and can only reach this leaf by climbing stairs. So, your task is to build those stairs for Clara as shown in Figure 2. Once the stairs are built – you need to make Clara climb the stairs, collect the leaf at the top and return to the original position.
+
+As you might recall, Clara didn’t have a dedicated method for placing trees in the world. But now there is a new method: addTree(int x, int y). This method allows you to add a tree at a specific coordinate (x, y) inside Clara’s world.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-simple-array-9RNhjF3pLdp6bqD2P/Figure_7_1_1.png)
+
+**Figure 1.**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-simple-array-9RNhjF3pLdp6bqD2P/Figure_7_1_2.png)
+
+**Figure 2.**
+
+A correct solution to this problem would follow such steps:
+
+1. Declare an array of type int[];
+2. Initialise this array before first use by encoding the stairs, where ‘0’ means no tree and ‘1’ means tree present;
+3. Parse the array inside the drawTriangle() method and create the stairs for Clara by using addTree() method for every ‘1’ you find inside the array you have created.
+
+
+### Code
+
+```java
+/* PERMITTED COMMANDS 
+   move, turnLeft, turnRight, treeLeft, treeRight, treeFront, onLeaf, putLeaf, removeLeaf, mushroomFront,
+   addTree(x, y),
+   JAVA
+   if, while, for
+   
+   To use this code in Greenfoot copy everything below to */
+   
+class MyClara extends Clara { 
+    /**
+     * In the 'run()' function you can write your program for Clara 
+     */
+
+    // Specify the size of the plane
+    final int COLS = 11 -1; //y-val
+    final int ROWS = 10 -1; //x-val
+
+    //debugging flag
+    boolean debug = true;
+
+    //Method to cause Clara to move
+    
+    void run() {
+   printArray(treeMap);
+   drawTriangle(treeMap);
+    stairClimb();
+    }
+
+    
+
+    
+    //map of the trees, top to bottom, left to right
+    int[] treeMap = {
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+        0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0,
+        0, 0, 0, 1, 1, 1, 1, 1, 0, 0, 0,
+        0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0,
+        0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0,
+        1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+    };
+    
+       /* A method to print the array*/
+
+    void printArray(int[] array){
+        for(int i = array.length; i > 0; i--){  //negative to print this the right way up
+            System.out.print(array[i]); 
+            if((i % (COLS+1) == 0) && i != 0){
+                System.out.print("\n");
+            }
+        }
+    }
+    
+    /* A method to draw in the triangle 
+        To get the column use the integerDivision to get a discrete value,
+        To get the row take the modulus with respect to the column number */
+
+    void drawTriangle(int[] array){
+        for(int i = 0; i < array.length; i++){  
+            if(array[i] == 1){                  
+                int col = i / (COLS+1);
+                int row = i % (COLS+1);
+                addTree(col, row);
+            }
+        }
+    }  
+
+    /* A method to climb the stairs, use the pattern of the steps to get to the top, 
+        count as you go up,
+        at the top reverse the process counting backwards. */
+    void stairClimb(){
+        int stepCount = 0;
+        while(!onLeaf()){
+            turnLeft();
+            move();
+            turnRight();
+            move();
+            stepCount++;
+        }
+        if(onLeaf()){
+            removeLeaf();
+        } else if(debug){
+            System.out.print("She climbed the stairs but didn't land on the leaf");
+        }
+        treeFind();
+        for(stepCount; stepCount > 0; stepCount--){
+            turnRight();
+            move();
+            turnLeft();
+            move();
+        }
+    turnLeft(); //Orientate into original direction.
+    }
+
+    void treeFind(){
+        while(!treeFront()){
+            turnLeft();
+        }
+    }
+   
+        
+        
+}
+
+    
+
+
+```
+
+## Sokoban Game
+
+This time you will take away some of Clara’s autonomy to develop a video game. The game you have to create is the old PC game called Sokoban. You must use the initial code and add keyboard input for the arrow keys. Pressing the “left arrow” button must result Clara making one step left. Similar, pressing “right arrow”, “forward arrow” and “back arrow” must result making Clara move one step in the corresponding direction.
+
+Keyboard input can be processed using the getKey() method as String key = getKey(); And then the value of key can be compared against the string representation of the name of the corresponding key.
+
+The essence of the Sokoban game is to push all mushrooms located in the world (Figure 1) on top of the special mushroom places while using the minimal possible number of moves.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-sokoban-game-ZGoDcnj2zHtFcFmY9/Figure_7_1_1.png)
+
+**Figure 1.**
+
+The successful completion of one of the levels is shown in Figure 2. To complete this problem you must write all the necessary code inside the act() method of MyClara. Notice that there are new methods available to you in this practical.
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-1-sokoban-game-ZGoDcnj2zHtFcFmY9/Figure_7_1_2.png)
+
+**Figure 2.**
+
+You can use the method canPushMushroom() to determine whether a mushroom can be pushed forward or is it stuck. Make sure that you only call this method when Clara is in front of a mushroom! There is also a levelComplete() method that gives you an example of what you should do when the current level is complete (to test whether a level is indeed complete you can use testLevelComplete() method).
+
+Finally, you will notice that in the bottom part of this screen the number of moves that Clara has made from the beginning of the game is being printed. You should use the method setNumberOfMoves(int) to update this text.
+
+
+### Code
+
+```java
+/**
+ * MyClara is a subclass of Clara. Therefore, it inherits all methods of Clara: <p>
+ * 
+ * 
+ * PERMITTED COMMANDS
+ * Actions:     move(), turnLeft(), turnRight(), putLeaf(), removeLeaf()
+ *              mushroomFront(), canPushMushroom(), setNumberOfMoves(),
+ *              testLevelComplete(), setDirectionUp(), setDirectionDown(),
+ *              setDirectionLeft(), setDirectionRight(), getKey()
+ * Sensors:     onLeaf(), treeFront(), mushroomFront()
+ * JAVA:        if, else, while, for, !, &&, ||
+ */
+class MyClara extends Clara 
+{
+    /**
+     * In the 'act()' method you can write your program for Clara
+     */
+
+    // Constants for keys
+    final String UP = "up";
+    final String DOWN = "down";
+    final String LEFT = "left";
+    final String RIGHT = "right";
+    int moves = 0; // move counter
+    boolean finished = false; //a flag to mark having finished
+
+
+    /* A method to move only when safe-to-do so */
+   void safeMove(){
+      if(mushroomFront() && canPushMushroom()){
+          move();
+          moves++;
+      } else if (!treeFront() && !mushroomFront()){
+          move();
+          moves++;
+      }
+    }
+
+
+    /* A method to set the keybindings */
+
+    void keyBindings(){
+
+
+        String key = getKey();
+
+        if(key == UP){
+            setDirectionUp();
+            safeMove();
+        }
+        if(key == LEFT){
+            setDirectionLeft();
+            safeMove();
+        }
+        if(key == DOWN){
+            setDirectionDown();
+            safeMove();
+        }
+        if(key == RIGHT){
+            setDirectionRight();
+            safeMove();
+        }
+
+    }
+
+
+    public void act() 
+    {
+      keyBindings();
+      if(testLevelComplete() && finished == false){
+          levelComplete();
+      }
+    }
+   
+    
+    public void levelComplete()
+    {
+        showWarning("Level Complete!");
+        setNumberOfMoves(moves);
+        finished = true;
+    }
+    
+}
+```
+
+## 3 Levels with Arrays
+
+One of the limitations of Problem 1 is that it features only one level. In Problem 2 your task is to advance the Sokoban game so that multiple levels can be played without reloading the game. Convert levels into arrays and create a mechanism by which a new level will be automatically loaded after completing the previous level. Make sure you also update the corresponding labels with appropriate information.
+
+To solve this problem please extend the `levelComplete`method declared inside MyClara. Inside levelComplete you should make calls to the loadLevel(char[][]) method. For example: calling loadLevel(level2) should result loading the level that is defined as the char[][] array with the name level2.
+
+The sample code is also supplied with 3 arrays that represent 3 different game levels. Your solution should feature at least those 3 levels. You can define additional levels by declaring new variables of type `char[][]`, named `level_x`, which hold the definition of the level similar to `level1` or `level2`. Hint: If you have more than 2 levels – it’s a good idea to make the variable that stores current level being “static”.
+
+Below are the 3 default levels:
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-levels-with-arrays-Nrv4WzQ9PpB6fcNDn/level_1.png)
+
+**Figure 1: Level 1**
+
+![Figure 2](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-levels-with-arrays-Nrv4WzQ9PpB6fcNDn/level_2.png)
+
+**Figure 2: Level 2**
+
+![Figure 3](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/problem-2-levels-with-arrays-Nrv4WzQ9PpB6fcNDn/level_3.png)
+
+
+### Code
+
+```java
+/**
+ * MyClara is a subclass of Clara. Therefore, it inherits all methods of Clara: <p>
+ * 
+ * 
+ * PERMITTED COMMANDS
+ * Actions:     move(), turnLeft(), turnRight(), putLeaf(), removeLeaf()
+ *              mushroomFront(), canPushMushroom(), setNumberOfMoves(),
+ *              testLevelComplete(), setDirectionUp(), setDirectionDown(),
+ *              setDirectionLeft(), setDirectionRight(), getKey()
+ * Sensors:     onLeaf(), treeFront(), mushroomFront(), loadLevel()
+ * JAVA:        if, else, while, for, !, &&, ||
+ */
+class MyClara extends Clara 
+{
+    private char[][] level1 = {
+		{'#', '#', '#', '#', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'#', ' ', '|', '#', ' ', ' ', ' ', ' ', ' ', ' '},
+        {'#', ' ', ' ', '#', '#', '#', ' ', ' ', ' ', ' '},
+        {'#', ' ', '@', ' ', ' ', '#', ' ', ' ', ' ', ' '},
+        {'#', ' ', ' ', '$', ' ', '#', ' ', ' ', ' ', ' '},
+        {'#', ' ', ' ', '#', '#', '#', ' ', ' ', ' ', ' '},
+        {'#', '#', '#', '#', ' ', ' ', ' ', ' ', ' ', ' '}
+    };
+    
+    private char[][] level2 = {
+        {'#', '#', '#', '#', '#', ' ', ' ', ' ', ' '},
+        {'#', '@', ' ', ' ', '#', ' ', ' ', ' ', ' '},
+        {'#', ' ', '$', '$', '#', ' ', '#', '#', '#'},
+        {'#', ' ', '$', ' ', '#', ' ', '#', '|', '#'},
+        {'#', '#', '#', ' ', '#', '#', '#', '|', '#'},
+        {' ', '#', '#', ' ', ' ', ' ', ' ', '|', '#'},
+        {' ', '#', ' ', ' ', ' ', '#', ' ', ' ', '#'},
+        {' ', '#', ' ', ' ', ' ', '#', '#', '#', '#'},
+        {' ', '#', '#', '#', '#', '#', ' ', ' ', ' '},
+    };
+    
+    private char[][] level3 = {
+        {'#', '#', '#', '#', '#', '#', ' '},
+        {'#', ' ', ' ', ' ', ' ', '#', ' '},
+        {'#', ' ', '#', '@', ' ', '#', ' '},
+        {'#', ' ', '$', '*', ' ', '#', ' '},
+        {'#', ' ', '|', '*', ' ', '#', ' '},
+        {'#', ' ', ' ', ' ', ' ', '#', ' '},
+        {'#', '#', '#', '#', '#', '#', ' '},
+    };
+    
+    private char[][] level4 = {
+        {'#', '#', '#', '#', '#', '#', ' '},
+        {'#', '$', ' ', ' ', ' ', '#', ' '},
+        {'#', ' ', '#', '@', '$', '#', ' '},
+        {'#', ' ', ' ', '*', ' ', '#', ' '},
+        {'#', '$', '|', '*', '#', '#', ' '},
+        {'#', ' ', ' ', '#', ' ', '#', ' '},
+        {'#', '#', '#', '#', '#', '#', ' '},
+    };
+    
+    /**
+     * In the 'act()' method you can write your program for Clara
+     */
+      // Constants for keys
+    final String UP = "up";
+    final String DOWN = "down";
+    final String LEFT = "left";
+    final String RIGHT = "right";
+    
+    //Other variables
+    int moves = 0; // move counter
+    boolean finished = false; //a flag to mark having finished
+    //char[][] currentLevel = level2; //pointer to the current level
+    static int currentLevel = 1;
+
+
+    /* A method to move only when safe-to-do so */
+   void safeMove(){
+      if(mushroomFront() && canPushMushroom()){
+          move();
+          moves++;
+      } else if (!treeFront() && !mushroomFront()){
+          move();
+          moves++;
+      }
+    }
+
+
+    /* A method to set the keybindings */
+
+    void keyBindings(){
+
+
+        String key = getKey();
+
+        if(key == UP){
+            setDirectionUp();
+            safeMove();
+        }
+        if(key == LEFT){
+            setDirectionLeft();
+            safeMove();
+        }
+        if(key == DOWN){
+            setDirectionDown();
+            safeMove();
+        }
+        if(key == RIGHT){
+            setDirectionRight();
+            safeMove();
+        }
+
+    }
+
+
+    public void act() 
+    {
+      keyBindings();
+      if(testLevelComplete() && finished == false){
+          levelComplete();
+      }
+    }
+   
+    
+    public void levelComplete()
+    {
+        showWarning("Level Complete!");
+        setNumberOfMoves(moves);
+        //finished = true;
+        loadLevel(nextLevel());
+    }
+
+    public char[][] nextLevel(){
+
+       if(currentLevel == 1){
+           currentLevel = 2;
+           return level2;
+       } else if(currentLevel == 2){
+           currentLevel = 3;
+           return level3;
+       } else if(currentLevel == 3){
+           currentLevel = 4;
+           return level4;
+       } else if(currentLevel == 4){
+           currentLevel = 1;
+           return level1;
+       } else {
+           currentLevel = 1;
+           return level1;
+       }
+
+    }
+    
+    
+}
+```
+
+
+
+# Major Assessment
+
+## Assessment Description
+
+The major assignment involves producing a Pacman style game in Clara Online.
+
+The essence of the game – is to make Clara eat all available leaves, while avoiding collisions with ghosts chasing her. Clara is to be controlled by a player through keyboard. Apart from leaves, there are also mushrooms available in Clara’s world, but unlike the practicals, Clara is unable to push them around, but instead she can eat those mushrooms and gain superpowers (for a short period of time she will be able to eat ghosts). Ghosts always start at their home base (also known as Ghost Healer) that is always marked by a think red dot. Somewhere close to a Ghost Healer there is always a ghost wall (represented by a square surrounded by dotted red line). The ghost wall can be penetrated by ghosts, but not by Clara, making the ghost base protected from invasion.
+
+When Clara eats a mushroom, ghosts change their colour and would start running away from Clara. This mode when Clara is able to eat ghosts is called “scared” mode. In the “scared” mode ghosts run away from Clara rather than chasing her and if a collision between a ghost and Clara occurs while in this mode – the ghost would change into an almost invisible creature that moves from the collision location to the base and then resurrects once the base is reached. If a collision happens between Clara and a ghost in any other mode – then Clara looses and the game is over.
+
+In solving the major assignment you will not be entirely on your own, as the steps involved are broken up in this assignment brief. During practical classes your tutors will explain you the basics in completing these steps. Before we start, there will be an explanation of all commands available in both Clara and the Ghosts vocabularies.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/pac-man-game-pJ2xWiMSnW3765r8H/MA.png)
+
+### Important Requirements
+
+For your convenience, all important requirements specified in this brief are re-listed here:
+
+- Clara and the Ghosts **must** be able to move from one side of the game to the other with the “wrapAroundWorld()” method
+- Clara **must** be capable of being controlled with at least the arrow keys on the keyboard
+- Clara **must not** move in the game until after an arrow key pressed
+- Clara **must** stop before hitting trees or the ghost wall
+- Clara **must** be able to eat leaves, and play the appropriate sound when doing so
+- When all the leaves are eaten, the game **must** progress to the next level
+- When each level starts the intro sound **must be played once** for each level and Clara and the Ghosts **must not** be able to move until after the intro sound has completed playing
+- Ghosts **must** move slower than Clara when moving normally and when scared
+- Ghosts **must** stop before hitting trees
+- Ghosts **must** randomly decide on a direction to go in when they find themselves in an intersection
+- When Clara and a Ghost collide, and the Ghost is neither dead nor scared, she **must** die, and play the appropriate sound
+- When Clara is dead the player **must not** be able to continue controlling her
+- Clara **must** be able to eat mushrooms, and this must make the Ghosts scared
+- When the Ghosts are scared, they **must** run the appropriate animation
+- When Clara and a Ghost collide, and the Ghost is scared, the Ghost **must** die, play the appropriate sound and play the appropriate animation
+- When Ghosts are dead they **must** attempt to return to the Ghost Healer
+- When Ghosts collide with the Ghost Healer they **must** no longer be dead
+- You **must** make, at a minimum, one extra level
+- All files **must** compile and the game must run.
+
+#### Important note 1
+
+While in the past you only had to work with one file, this time you will have to edit *Ghost* for all the logic related to the Ghosts as well as MyClara for all the Clara functionality.
+
+#### Important note 2
+
+Do not let the following list of commands scare you, as they are further explained in the assignment brief and your tutors will help you to select those commands that you need for each task.
+
+#### Important note 3
+
+For this assignment you should no longer have a main loop (for or while) inside act(). Instead you should rely on the act() method being executed repetitively (similar to how you did in Practical 2). The stop(); command MUST NOT be used in this assignment.
+
+### Clara's Vocabulary
+For this assignment, the following commands are available for Clara right from the start:
+
+|             Name              |                         Description                          |                            Input                             |                            Output                            |
+| :---------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|          treeFront()          |         Checks if there is a tree in front of Clara.         |                           Nothing.                           | true if there is a tree in front of Clara.false if there is not a tree in front of Clara. |
+|       ghostWallFront()        |      Checks if there is a ghost wall in front of Clara.      |                           Nothing.                           | true if there is a ghost wall in front of Clara.false if there is not a ghost wall in front of Clara. |
+|        getDirection()         |            Gets which direction Clara is facing.             |                           Nothing.                           | A string which represents the direction Clara is facing.`up` if Clara is facing up toward the top of the screen.`down` if Clara is facing toward the bottom of the screen.`right` if Clara is facing to the right side of the screen.`left` if Clara is facing to the left side of the screen. |
+|     setDirection(string)      | Makes Clara face a specific direction.It will not change her direction if there is a tree in the way. | A String, which specifies which direction you want Clara to face.“up” - face toward the top of the screen.“down” - face toward the bottom of the screen.“right” - face toward the right side of the screen.“left” - face toward the left side of the screen. |                           Nothing.                           |
+|           move(int)           |             Moves Clara at the specified speed.              | An integer, which specifies how fast you want Clara to move. |                           Nothing.                           |
+|         makeScared()          | Clara lets the Ghosts know that she is ready to eat, and makes them scared.For more information, see the “isScared() function in the Ghost’s vocabulary. Also see the section “Part 10 – Eating Mushrooms and Making Ghosts Eatable” |                           Nothing.                           |                           Nothing.                           |
+|          isScared()           |   Clara checks whether the Ghosts are still scared of her.   |                           Nothing.                           | true if the Ghosts are still scared of her.false if the Ghosts are no longer scared of her. |
+|           animate()           | Clara continues her animation by one frame.For more information, see the section “Part 2 - Animating Clara’s Movement”. |                           Nothing.                           |                           Nothing.                           |
+|         animateDead()         | Clara visually shows that she is dead.For more information, see the section “Part 9 - Ghosts Colliding With Clara and Losing” |                           Nothing.                           |                           Nothing.                           |
+|           onLeaf()            |             Checks if Clara is on top of a leaf.             |                           Nothing.                           | true if Clara is on top of a leaf.false if Clara is not on top of a leaf. |
+|         removeLeaf()          |        Clara removes a leaf that she is standing on.         |                           Nothing.                           | Nothing.Will show an error if she tries to remove a leaf that isn’t there. |
+|         onMushroom()          |           Checks if Clara is on top of a mushroom.           |                           Nothing.                           | true if Clara is on top of a mushroom.false if Clara is not on top of a mushroom. |
+|       removeMushroom()        |      Clara removes a mushroom that she is standing on.       |                           Nothing.                           | Nothing.Will show an error if she tries to remove a mushroom that isn’t there. |
+|       allLeavesEaten()        |  Checks if Clara has eaten all of the leaves in the level.   |                           Nothing.                           | true if there are no more leaves for Clara to eat.false if there are still leaves for Clara to eat. |
+|         isClaraDead()         | Checks if Clara should be dead.For more information, see the function “makeClaraDead()” in the Ghost’s vocabulary and the section “Part 9 – Ghosts Colliding with Clara and Losing” |                           Nothing.                           | true if Clara should be dead.false if Clara should not be dead. |
+|      playClaraDieSound()      | Plays Clara’s death sound.For more information see the section “Part 9 – Ghosts Colliding with Clara and Losing” |                           Nothing                            |                           Nothing                            |
+| isClaraDieSoundStillPlaying() | Checks if Clara’s death sound is still playing.For more information see the section “Part 9 – Ghosts Colliding with Clara and Losing” |                           Nothing.                           |                           Nothing.                           |
+|     playLeafEatenSound()      |        Plays the sound of Clara eating a single leaf.        |                           Nothing.                           |                           Nothing.                           |
+|       playPacmanIntro()       |                Plays the pacman intro sound.                 |                           Nothing.                           |                           Nothing.                           |
+|  isPacmanIntroStillPlaying()  | Checks if the pacman intro sound is still playing.For more information see the section “Part 4 – Eating Leaves and Winning” |                           Nothing.                           |                           Nothing.                           |
+|       wrapAroundWorld()       | Enables Clara to automatically move off one side of the game, and end up on the other. |                           Nothing.                           |                           Nothing.                           |
+|    getCurrentLevelNumber()    |            Gets the number of the current level.             |                           Nothing.                           | An integer representing the current level number. E.g. If the current level is 1, then it will return 1. |
+|   advanceToLevel(char[][])    | Changes the current game level to the one specified. If it is sent null, then it will automatically load the first level.To see more information on how to use it, see “Part 4 – Eating Leaves and Winning”For more information on making levels to send the method, see “Part 12 – Making and Adding Levels” | A level as per “Part 12 – Making and Adding Levels”, or null. |                           Nothing.                           |
+
+### Ghosts Vocabulary
+
+For this assignment, you will also be required to code new characters - Ghosts. The Ghosts pose a threat to Clara as she tries to eat all of her leaves and try to prevent her from accomplishing her mission.
+
+The behaviour of each Ghost is controlled by the act() method inside Ghost.java. Each of the Ghosts in the game is essentially an instance of the Ghost class (we will learn about classes soon enough in the lectures).
+
+In order to assist you in programming Ghosts, just like for Clara, there are Ghost commands already made for you. Some of these commands are exactly the same as Clara’s, some are slightly different, and some
+
+|            Name             |                         Description                          |                            Input                             |                            Output                            |
+| :-------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|         treeFront()         |       Checks if there is a tree in front of the Ghost.       |                           Nothing.                           | true if there is a tree in front of the Ghost.false if there is not a tree in front of the Ghost. |
+|         treeAbove()         | Checks if there is a tree above the Ghost.Note that this method is relative to the screen, not the Ghost. That is, regardless of the direction of the Ghost, a tree that is above it, will always be above it. |                           Nothing.                           | true if there is a tree above the Ghost.false if there is not a tree above the Ghost. |
+|         treeBelow()         | Checks if there is a tree below the Ghost.Note that this method is relative to the screen, not the Ghost. That is, regardless of the direction of the Ghost, a tree that is below it, will always be below it. |                           Nothing.                           | true if there is a tree below the Ghost.false if there is not a tree below the Ghost. |
+|        treeToLeft()         | Checks if there is a tree to the left of the Ghost.Note that this method is relative to the screen, not the Ghost. That is, regardless of the direction of the Ghost, a tree that is to the left of it, will always be to the left it. |                           Nothing.                           | true if there is a tree to the left of the Ghost.false if there is not a tree to the left of the Ghost. |
+|        treeToRight()        | Checks if there is a tree to the right of the Ghost.Note that this method is relative to the screen, not the Ghost. That is, regardless of the direction of the Ghost, a tree that is to the right of it, will always be to the right it. |                           Nothing.                           | true if there is a tree to the right of the Ghost.false if there is not a tree to the right of the Ghost. |
+|       getDirection()        |          Gets which direction the Ghost is facing.           |                           Nothing.                           | A string which represents the direction the Ghost is facing.“up” if the Ghost is facing up toward the top of the screen.“down” if the Ghost is facing toward the bottom of the screen.“right” if the Ghost is facing to the right side of the screen.“left” if the Ghost is facing to the left side of the screen. |
+|    setDirection(string)     | Makes the Ghost face a specific direction.The Ghost will not change to a direction that has a tree in the way. | A string, which specifies which direction you want the Ghost to face.“up” if you want it to face toward the top of the screen.“down” if you want it to face toward the bottom of the screen.“right” if you want it to face toward the right side of the screen.“left” if you want it to face toward the left side of the screen. |                           Nothing.                           |
+|          move(int)          | Moves the Ghost at the specified speed. The ghost will move in the direction it is currently facing until it hits an obstacle or until the direction is changed | An integer, which specifies how fast you want the Ghost to move. |                           Nothing.                           |
+|         isScared()          |    The Ghost checks whether it should be scared of Clara.    |                           Nothing.                           | true if the Ghosts should still be afraid of Clara.false if the Ghosts should no longer be scared of Clara. |
+|          animate()          | The Ghost continues its animation by one frame.For more information, see the section “Part 6 - Animating Ghost’s Movement”. |                           Nothing.                           |                           Nothing.                           |
+|        animateDead()        | The Ghosts continues its death animation by one frame.For more information, see the section “Part 10 – Eating Mushrooms and Making Ghosts Eatable” |                           Nothing.                           |                           Nothing.                           |
+|       animateScared()       | The Ghosts continues its scared animation by one frame.For more information, see the section “Part 10 – Eating Mushrooms and Making Ghosts Eatable” |                           Nothing.                           |                           Nothing.                           |
+|         getClara()          | Gets Clara.Is to be used with the “isAboveMe”, “isBelowMe”, “isToMyLeft” and “isToMyRight” commands, explained below . |                           Nothing.                           |                            Clara.                            |
+|      getGhostHealer()       | Gets the Ghost Healer.Is to be used with the “isAboveMe”, “isBelowMe”, “isToMyLeft” and “isToMyRight” commands, explained below. |                           Nothing.                           |                        Ghost Healer.                         |
+|      isAboveMe(Actor)       |    Checks whether the specified Actor is above the Ghost.    |                    Clara or Ghost Healer.                    | true if specified Actor is above the Ghost.false if the specified Actor is not above the Ghost. |
+|      isBelowMe(Actor)       |    Checks whether the specified Actor is below the Ghost.    |                    Clara or Ghost Healer.                    | true if specified Actor is below the Ghost.false if the specified Actor is not below the Ghost. |
+|      isToMyLeft(Actor)      | Checks whether the specified Actor is to the left of the Ghost. |                    Clara or Ghost Healer.                    | true if specified Actor is to the left of the Ghost.false if the specified Actor is not to the left of the Ghost. |
+|     isToMyRight(Actor)      | Checks whether the specified Actor is to the right of the Ghost. |                    Clara or Ghost Healer.                    | true if specified Actor is to the right of the Ghost.false if the specified Actor is not to the right of the Ghost. |
+|      intersects(Actor)      | Checks whether the specified Actor is currently intersecting the Ghost. |                    Clara or Ghost Healer.                    | true if the specified Actor is currently intersecting the Ghost.false if the specified Actor is not currently intersecting the Ghost. |
+|       makeClaraDead()       | Makes Clara’s “isClaraDead()” method return true.For more information, see the section “Part 9 – Ghosts Colliding with Clara and Losing” |                           Nothing.                           |                           Nothing.                           |
+|    playGhostEatenSound()    |           Plays the sound of a Ghost being eaten.            |                           Nothing.                           |                           Nothing.                           |
+| isPacmanIntroStillPlaying() | Checks if the pacman intro sound is still playing.For more information see the section “Part 5 – Moving Ghosts” |                           Nothing.                           |                           Nothing.                           |
+|      wrapAroundWorld()      | Enables the Ghost to automatically move off one side of the game, and end up on the other side. |                           Nothing.                           |                           Nothing.                           |
+
+
+
+
+## Making the Game
+
+### Part 1 - Moving Clara and Keyboard Input
+
+One of your first tasks - is to learn how to process keyboard input of the player by using Keyboard.isKeyDown(String) method. Try passing the movement constants defined inside MyClara.java as input for Keyboard.isKeyDown(String) and see what happens when you press the arrow keys. Try starting with using System.out.println() to print which of the keys was pressed to make yourself familiar with keyboard input.
+
+Next thing for you to do – is to make sure that Clara can be controlled with the arrow keys. You may add extra functionality, such as controls for left handed players, but that is not compulsory. You will need to use Clara’s “setDirection(String)” method, which can be sent one of the following commands; “up”, “down”, left” or “right” (a good idea is to use the same movement constants defined inside MyClara rather than using those String literals inside your code). Passing the aforementioned String values to setDirection(String) method will set Clara’s direction to the command you specify.
+
+Note that the “setDirection(String)” method will not change Clara to a specified direction if there is a tree in that direction. Once you’re able to process keyboard input and make Clara respond to it by turning in the right direction – now it’s time to make Clara move. In order to make Clara move, you will need to use the “move(int)” method. Note that it can be passed any integer, and that a bigger integer will make Clara move faster. The integer that it is passed will determine how fast Clara moves. It will be up to you to determine a suitable speed for Clara.
+
+Please note that it is not a good programming practice to arbitrarily pass numbers to methods, and that it is always a good idea to instead, make a constant that will hold the value that you wish to pass. Then you will need to somehow stop Clara from automatically moving at the start of the game, and only start continuously moving after a single key is pressed. Note that as per the original Pacman game, it is only necessary to stop Clara from moving before the initial key press, and that after that, it is perfectly acceptable to have Clara continuously move in the direction that was last selected.
+
+Once you have determined, and tested, a suitable speed, you might notice Clara disappearing off the edge of the world. It is important that Clara, and the Ghosts, at some point call the method “wrapAroundWorld()” to deal with this issue. This will enable them to reappear on the opposite side of the world that they disappear off.
+
+### Part 2 - Animating Clara’s Movement
+
+In order to animate Clara, you will need to call the “animate()” method. You may notice, that if you just call the “animate()” method, that it cycles through Clara’s animation very quickly. This is because every time the method is called, it advances Clara’s animation to the next frame.
+
+You will need to figure out a way of not calling it every time the act method is run, but every so many times that the act method is run.
+
+**HINT:** If you are having trouble, try only calling “animate()” every second time the act method is called. Then try editing that attempt to work only every third time the act method is called. It will ultimately be up to you to determine what looks best.
+
+### Part 3 - Clara Collisions with Trees and Ghost Walls
+
+Obviously, Clara really shouldn’t be floating through the world; she should stop before hitting trees. She will also need to stop before hitting the Ghost Wall, as only the Ghosts are allowed to pass through it.
+
+It will be up to you to figure out how to stop Clara from passing through either. HINT: You will need to use the “ghostWallFront()” method.
+
+### Part 5 - Moving Ghosts
+
+Making the Ghosts move is very similar to making Clara move, but all your corresponding code must now be placed inside Ghost.java. You will need to call the “move(int)” method and determine a suitable speed for Ghosts. Note that they should move slower than Clara at this point.
+
+It is also a good idea to add the code to stop them from moving when the intro is playing. You will need to use the method “isPacmanIntroStillPlaying()”.
+
+Don’t forget to call the “wrapAroundWorld()” method, so that Ghosts correctly move after reaching the edge of the world. Before starting to code collisions and AI, there is something important you need to note: unlike Clara the Ghosts do not face the direction that they are pointing. They will always look like they are facing up, and this will not change. This is important to know for logic error checking.
+
+### Part 6 - Animating Ghosts’ Movement
+
+Making the Ghosts animated works in the similar way as animating Clara. The method you call is exactly the same. Just like Clara, you will need to figure out a way of calling the “animate()” method every so often that the act method is called, and that it is up to you to determine how often they should animate.
+
+### Part 7 - Ghosts and Tree Collisions
+
+Making the Ghosts detect that a tree is in the way, and stop, is achieved in a similar way as making Clara do so, you will even need the same methods. Although, unlike Clara, there is no human player to tell the Ghosts where to go after they hit a tree. It is up to you to decide what they should generally do when they hit one.
+
+Note that telling the Ghosts where to face will involve using the “setDirection(string)” method, just like with Clara. It may assist your general Ghost logic if you use the “getDirection()” method, which returns a string just like you would send the “setDirection(string)” method, and that the string will be either “up”, “down”, “left” or “right”. It is not necessary to use the “getDirection()” method, but you may find it helpful while testing and debugging your code. Note that, just like Clara, the “setDirection(string)” method will not change the Ghost to a specified direction if there is a tree in that direction.
+
+### Part 8 - AI and Intersections
+
+An important part of making your Ghosts intelligent – is detecting an intersection and deciding which way to go. You should start with simply selecting a random direction at an intersection by using random numbers covered in the lectures. You will need to use the methods “treeAbove()”, “treeBelow()”, “treeToLeft()” and “treeToRight()” to detect an intersection.
+
+It should be noted that, unlike most sensor commands that you’ve used before, like “treeFront()” and “treeLeft()”, these commands are not relative to the direction that the Ghost is facing, they are relative to the screen itself. This means that a tree that is above the Ghost, will always be above the ghost, regardless of which direction it is facing. This basic logic is true for all four aforementioned commands.
+
+Test them out in order to understand them. Drag one of the Ghosts around and see what is the result of calling those methods.
+
+It should be noted that, for the most part, an intersection can be defined as a location where there are three or more directions to go to.
+
+**HINT:** You might want to check to make sure the Ghost has passed the intersection it is currently at before running the code to choose a direction at an intersection. (Otherwise, it might just hang around the same intersection and not go anywhere).
+
+For more advanced students, use the “isAboveMe()”, “isBelowMe()”, “isToMyLeft()”, “isToMyRight()” and “getClara()” methods to give them a 50% chance of moving in the Clara’s direction at every intersection. Note that the “isAboveMe()”, “isBelowMe()”, “isToMyLeft()”, “isToMyRight()” methods are further explained in the “Part 11 – Ghosts and Regeneration”.
+
+### Part 9 – Ghosts Colliding with Clara and Losing
+
+The Ghosts must pose a threat to Clara, and as such, they must kill her if they catch her. In order to do so, you will need to check if they have collided with Clara. To do so, you will need to use the methods “intersects(Actor)”, “getClara()” and “makeClaraDead()” inside the Ghost class. Clara will need to use the method “isClaraDead()” to signal that the game is over. It is important for the Ghosts to be continually checking whether they have caught Clara, and it is important for Clara to check whether she is dead to prevent further movement and animation.
+
+Once you have Clara capable of checking whether she is dead, you will need to show the appropriate death image, with Clara’s method “animateDead()” and play the appropriate sound with the method “playClaraDieSound()”. It is important that the method “playClaraDieSound()” is only called once.
+
+It is also important that you stop processing keyboard input from the player at the point of Clara’s death. Note that Clara’s “animateDead()” method only contains one frame, and so it is acceptable to run it every time the act method is called after Clara is dead.
+
+### Part 10 – Eating Mushrooms and Making Ghosts Eatable
+
+Clara will need to able to eat mushrooms and get her super power. In order to do so, you will need to use methods “onMushroom()” and “removeMushroom()”.
+
+Then you will need to appropriately place the method “makeScared()” when Clara has eaten a mushroom. The Ghosts will need to check whether or not they should be scared, and switch to the appropriate animation when they are. You will need to use the methods “isScared()” and “animateScared()”. Note that the “animateScared()” method will need to be run every so many times that the act method is called, just like the “animate()” method.
+
+It is acceptable, but not compulsory to increase the Ghosts’ speed when they are scared, but they should be slower than Clara.
+
+You will then need to ensure that the Ghosts don’t kill Clara when they collide with her if they are scared, and instead, die themselves. It will be up to you to create your own variable that checks if the Ghosts are dead. You will need the “animateDead()”and “playGhostEatenSound()” methods.
+
+It is important to note that the Ghosts do not stop moving when they are dead, and that the Ghost’s “animateDead()” method will need to be run every so many times that the act method is called, just like the “animate()” method. It is also important that the Ghosts should not harm Clara when they are scared or when they are dead. Also note that the game will automatically decide how long the Ghosts should be scared for.
+
+### Part 11 - Ghosts and Regeneration
+
+When a Ghost is dead, it will need to return to the Ghost Healer, which is the red object near where the Ghosts start. It will be up to you to decide how they should logically make their way back to the Ghost Healer object. You will need to use the “isAboveMe(Actor)”, “isBelowMe(Actor)”, “isToMyLeft(Actor)”, “isToMyRight(Actor)” and “getGhostHealer()” methods to make this happen.
+
+Note that the “isAboveMe(Actor)”, “isBelowMe(Actor)”, “isToMyLeft(Actor)”, “isToMyRight(Actor)” methods need to be sent an Actor, and that only two are available to you, through the “getGhostHealer()” and “getClara()” methods. You will need to send those ‘get’ methods to the ‘is’ methods in order to get an appropriate answer.
+
+An example of how to use the above functions is below:
+
+“isAboveMe( getGhostHealer() );” If the above example returns true, then the Ghost Healer is above the Ghost. When the Ghost returns to the Ghost Healer object, it will need to make itself no longer dead. You will need the “intersects(Actor)” and “getGhostHealer()” methods to make this work.
+
+### Part 12 – Making and Adding Levels
+
+It’s time to understand how Clara’s world is designed in this game, and how to design and add your own levels. When you first opened up “MyClara”, you may have noticed the first level at the top of the code. This is the format you will need to use in order to create your own levels. See the image below for what you should roughly see when first opening up “MyClara”.
+
+![Figure 1](https://clara-uploads.s3-ap-southeast-2.amazonaws.com/exercise/Pac-Man-Game-pJ2xWiMSnW3765r8H/Figure_MA_10.png)
+
+You will need to rename the level from “LEVEL_1” to “LEVEL_2”.
+
+You’ll notice that a level is simply an array of characters that visually represent the level that they make. The characters used are as follows:
+
+- '#' represents a tree, which is an obstacle to both Clara and the Ghosts.
+- '.' represents a leaf, which Clara needs to eat in order to progress to the next level.
+- ' ' represents nothing, which is essentially an empty tile.
+- '%' represents a Ghost. At least one must be present in every level you make.
+- '?' represents a Ghost Healer, which the Ghosts return to when eaten in order to come back to life. At least one must be present in every level you make.
+- '|' represents a Ghost Wall, which is an obstacle that only Ghosts may pass through, and not Clara. It is connected to the group of trees that make up the initial room that the Ghosts start in. At least one must be present in every level you make.
+- '$' represents a mushroom, which can be eaten by Clara in order to make the Ghosts scared and capable of being killed by Clara.
+- '@' represents Clara, it is where she will start at the beginning of the level. Only one must be present in every level you make.
+
+The characters that make up the array of a level in Clara’s world are each surrounded by single quotes (‘’) and the characters in a single row are separated by commas (,).
+
+A single row in a level is surrounded by curly braces({}), and the end of a row of a level, that is not the end of the whole level, is indicated by a comma after the closing curly brace (},).
+
+Now you should have a rough understanding of how Clara’s world is constructed.
+
+In order to build your own level, all you have to do is delete all of the streets of the level and write your own level in there, following the above rules in order to present it and write it properly.
+
+Then write your own level, in between the curly braces that are left after you delete what was highlighted. After you’re done, you’ll need to go to where you call the “advanceToLevel(char[][])” method and figure out a way of sending it “LEVEL_2” when the player has finished “LEVEL_1”.
+
+Now add a new level, and test it.
+
+To add another level, simply copy and paste “LEVEL_2” inside MyClara and change it to “LEVEL_3”, and modify it just like you did for level 2.
+
+Add as many levels as you want, although technically you are only required to add one more level.
+
+### Part 13 – Life is Good
+
+Now tidy up your code, add more levels if you want, but be sure to properly comment what you’ve coded. You’re ready to hand in your assignment. Life is good!
+
+## The Code I used
+
+### Clara
+
+
+#### Code
+
+```java
+/**
+ * MyClara
+ * 
+ * Available functions (see Assignment document for explanations on what each function does):
+ * treeFront, ghostWallFront,
+ * getDirection, setDirection,
+ * move,
+ * makeScared, isScared,
+ * animate, animateDead, 
+ * onLeaf, removeLeaf, 
+ * onMushroom, removeMushroom,
+ * allLeavesEaten, 
+ * isClaraDead,
+ * playClaraDieSound, isClaraDieSoundStillPlaying,
+ * playLeafEatenSound,
+ * playPacmanIntro, isPacmanIntroStillPlaying,
+ * wrapAroundWorld,
+ * getCurrentLevelNumber, advanceToLevel
+ */
+class MyClara extends Clara
+{
+    // Please leave this first level here,
+    // until after you've completed \"Part 12 -
+    // Making and Adding Levels\"
+  public final char[][] LEVEL_1 = {
+                {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'},
+                {'#','$','.','.','.','.','.','.','.','.','.','.','.','.','.','.','.','$','#'},
+                {'#','.','#','#','.','#','.','#','#','#','#','#','.','#','.','#','#','.','#'},
+                {'#','.','.','.','.','#','.','.','.','.','.','.','.','#','.','.','.','.','#'},
+                {'#','#','#','#','.','#',' ','#','#','|','#','#',' ','#','.','#','#','#','#'},
+                {' ',' ',' ',' ','.',' ',' ','#','%','?','%','#',' ',' ','.',' ',' ',' ',' '},
+                {'#','#','#','#','.','#',' ','#','#','#','#','#',' ','#','.','#','#','#','#'},
+                {'#','.','.','.','.','.','.','.','.','#','.','.','.','.','.','.','.','.','#'},
+                {'#','.','#','#','.','#','#','#','.','#','.','#','#','#','.','#','#','.','#'},
+                {'#','$','.','#','.','.','.','.','.','@','.','.','.','.','.','.','.','$','#'},
+                {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'}
+            };
+    public final char[][] LEVEL_2 = {
+                {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'},
+                {'%','$','@','.','.','.','.','.','.','.','.','.','.','.','.','.','.','$','%'},
+                {'#',' ','#','#','#','#','.','#','#','#','#','#','.','#','.','#','#','.','#'},
+                {'#','|','?','#','.','#','.','.','.','.','.','.','.','#','.','.','.','.','#'},
+                {'#','#','#','#','.','#',' ','#','#','|','#','#',' ','#','.','#','#','#','#'},
+                {' ',' ',' ',' ','.',' ',' ','#','%','?','%','#',' ',' ','.',' ',' ',' ',' '},
+                {'#','#','#','#','.','#',' ','#','#','#','#','#',' ','#','.','#','#','#','#'},
+                {'#','.','.','.','.','.','.','.','.','#','.','.','.','.','.','.','.','.','#'},
+                {'#','.','#','#','.','#','#','#','.','#','.','#','#','#','.','#','#','.','#'},
+                {'#','$','.','#','.','.','.','.','.','$','.','.','.','.','.','.','.','$','#'},
+                {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'}
+            };
+
+    public final char[][] LEVEL_3 = {
+                {'#','#','#',' ','#','#',' ','#','#','#','#','#','#','#','#','#','#','#','#'},
+                {'#','.','.','.','#','.','.','.','.','.','.','.','.','.','.','.','.','$','#'},
+                {'#','.','#','.','#','.','.','#','#','#','#','#','#','#','.','#','#','.','#'},
+                {'#','.','#','.','#','.','.','.','.','.','.','.','.','#','.','.','@','.','#'},
+                {'#','.','#','.','#','.',' ','#','#','|','#','#',' ','$','.','#','#','#','#'},
+                {' ',' ','#',' ','#',' ',' ','#','%','?','%','#',' ',' ','.',' ',' ',' ',' '},
+                {'#','.','#','.','#','.',' ','#','#','#','#','#',' ','#','.','#','#','#','#'},
+                {'#','.','#','.','#','.','.','.','.','#','.','.','.','.','.','.','.','.','#'},
+                {' ','.','#','.','#','.','#','#','.','#','.','#','#','%','.','#','#','%',' '},
+                {'#','.','#','.','.','.','.','.','.','$','.','.','.','$','.','.','.','$','#'},
+                {'#','#','#',' ','#','#',' ','#','#','#','#','#','#','#','#','#','#','#','#'}
+            };
+
+    // Movement constants
+    public final String UP = "up";
+    public final String DOWN = "down";
+    public final String LEFT = "left";
+    public final String RIGHT = "right";
+    public final String ENTER = "enter";
+    public final String SPACE = "space";
+    public final String L = "l";
+    public double speed = 6;
+
+
+    // Add and initialise Clara's variables here
+    public boolean initKey = false;
+    public boolean introFlag = false;
+    public int animateCount = 1;
+    public final int ANFACTOR = 9; //what factor to slow the animation down by, 9 looks good.
+    public boolean diedYet; //variable to determine whether Clara has died to limit the song playing.
+
+
+
+    /**
+     * Act method
+     * 
+     * Runs of every frame
+     */
+
+    public void act()
+    {
+        ///////////////////////////////////////////
+        //////////****Main Loop****////////////////
+        //////////////////////////////////////////
+
+        /* Play the Intro Song */
+        //Play the Intro Song in the ghosts class file, it's easier to stop them moving
+        //that way
+
+        /* Animate Clara */
+
+        animationControl();
+
+
+        if (startFlagCheck() && !isPacmanIntroStillPlaying()) { //Only do Anything if a button has been pressed and the intro has finished.
+
+            smartMove(speed); //Move only if the startflag is true and the path is unobstructed
+            // and the intro has finished.
+
+            /* Bind the arrow keys to a direction change */
+            keyFace(RIGHT, RIGHT);
+            keyFace(LEFT, LEFT);
+            keyFace(DOWN, DOWN);
+            keyFace(UP, UP);
+           
+            /* Eat the Leaves if you're on them */
+            leafEat();
+
+            //Check Level Progression
+            LevelProgression();
+
+            //Die upon Ghost Collision
+            claraDeath();
+
+            //Eat Mushrooms and get Power Up.
+            mushroomEat();
+
+        }
+    }
+
+
+
+    ///////////////////////////////////////////
+    //////////****FUNCTIONS****////////////////
+    //////////////////////////////////////////
+
+    /* A method to eat mushrooms and get the power up as clara moves over them */
+    public void mushroomEat() {
+        if (onMushroom()) {
+            removeMushroom();
+            makeScared();
+        }
+    }
+
+    /* A method to cause Clara to Die upon striking a ghost */
+    public void claraDeath() {
+        if (isClaraDead()) {
+            animateDead();
+            if (!diedYet) {
+                playClaraDieSound();
+                System.out.println("Game Over!");
+                diedYet = true;
+            }
+        }
+    }
+
+    /* A method to move clara Only if an initial key has been pressed and
+         there are no trees infront 
+         I've put wrapAroundWorld with move, because I figure if clara is obstructed from
+         moving she doesn't need the capacity to worldwrap either, this is just
+         a potential bug I'm trying to avoid */
+
+    public void smartMove(double speedVar) {
+        if (!treeFront() && !ghostWallFront() && !isPacmanIntroStillPlaying() && !isClaraDead()) {
+            move(speedVar);
+            wrapAroundWorld(); //Put this in here, to make it more restricted
+        }
+    }
+
+    /* A method to correspond a keypress to a direction change */
+
+    public void keyFace(String direction, String key) {
+        if (Keyboard.isKeyDown(key) && !isClaraDead()) {
+            if (getDirection() != direction) {
+                setDirection(direction);
+            }
+        }
+    }
+
+
+    /* Start Flag; a flag to indicate whether or not
+     an initial key press has been registered */
+
+
+    public boolean startFlagCheck() {
+        if (initKey == false) {
+            if (buttonPress()) {
+                initKey = true;
+                // playPacmanIntro(); //moved to the ghost class file, simpler that way.
+                smartMove(speed);
+            }
+
+
+        }
+
+        return initKey;
+    }
+
+    /* A method to register button presses and return true/false in the event that one
+    of the arrow keys is pressed */
+
+    public boolean buttonPress() {
+        boolean bpress;
+        if (Keyboard.isKeyDown(RIGHT)) {
+            bpress = true;
+        }
+        if (Keyboard.isKeyDown(DOWN)) {
+            bpress = true;
+        }
+        if (Keyboard.isKeyDown(LEFT)) {
+            bpress = true;
+        }
+        if (Keyboard.isKeyDown(UP)) {
+            bpress = true;
+        }
+        if (Keyboard.isKeyDown(ENTER)) {
+            bpress = true;
+        }
+        if (Keyboard.isKeyDown(SPACE)) {
+            bpress = true;
+        }
+
+        return bpress;
+    }
+
+
+
+    /* A method to eat leaves when on leaves and play a sound */
+
+    public void leafEat() {
+        if (onLeaf()) {
+            removeLeaf();
+            playLeafEatenSound();
+        }
+    }
+
+    /* A method to move through levels after the leaves have been eaten*/
+
+    public void LevelProgression() {
+        if (allLeavesEaten()) {
+            nextLevel();
+        }
+
+    }
+
+    /* A method to decide which level will be the 'next' level */
+    public void nextLevel() {
+        if (getCurrentLevelNumber() == 1) {
+            advanceToLevel(LEVEL_2);
+            System.out.println("Next Level!");
+        } else if (getCurrentLevelNumber() == 2) {
+            advanceToLevel(LEVEL_3);
+            System.out.println("Next Level!");
+        }
+        else if (getCurrentLevelNumber() == 3) {
+            advanceToLevel(LEVEL_1);
+            System.out.println("Game Cleared! ... restarting");
+        }
+
+    }
+
+    /* A method to offset the animations per frame */
+    public void animationControl() {
+        if (animateCount == ANFACTOR) {
+            animateCount = 1;
+            animate();
+        } else {
+            animateCount++;
+        }
+    }
+
+
+}
+```
+
+
+
+### Ghost
+
+
+#### Code
+
+```java
+/**
+ * Ghost Class
+ * 
+ * Available functions (see Assignment document for explanations on what each function does):
+ * treeFront, treeAbove, treeBelow, treeToLeft, treeToRight,
+ * getDirection, setDirection,
+ * move,
+ * isScared,
+ * animate, animateDead, animateScared,
+ * getClara, getGhostHealer,
+ * isAboveMe, isBelowMe, isToMyLeft, isToMyRight,
+ * makeClaraDead,
+ * playGhostEatenSound,
+ * isPacmanIntroStillPlaying,
+ * wrapAroundWorld
+ */
+class Ghost extends Character
+{
+    MyClara claraScript = new MyClara(); // declaring the clara object so we can use variables
+
+    //Add and initialise Ghost variables here
+    public boolean startFlag = false;
+    public boolean introFlag = false;
+    public int animateCount = 1;
+    public final int ANFACTOR = 7; //what factor to slow the animation down by, 9 looks good.
+    int freePathCount = 0;
+    int intKeyVal = 1; //variable to store the layout of trees around the ghost.
+    int intersectionCounter;
+    public boolean initKey; //variable to determine whether or not there has been an initial key press.
+
+
+    // constants
+    public final String UP = "up";
+    public final String DOWN = "down";
+    public final String LEFT = "left";
+    public final String RIGHT = "right";
+    public final double NORMALRATE = 0.7; //0.7 looks good
+    public final double SCAREDRATE = 0.75; //0.75 looks good
+    public final double DEATHRATE = 0.65; //0.65 looks good
+    public double speed = NORMALRATE * claraScript.speed; //default speed
+    public boolean deathflag; // a variable to indicate death for the ghost
+    public boolean diedYet;
+
+
+
+
+
+
+
+
+    /**
+     * Act method, runs on every frame
+     */
+    public void act()
+    {
+        if (!introFlag) {
+            claraScript.playPacmanIntro(); //if this has a red underline, remove it and put it back,
+                                            //it's a bug in greenfoot,
+                                            // It doesn't like that I'm accessing a method from the 
+                                            // MyClara.java, but it all works, it's just a problem in
+                                            //greenfoot that requires this line 
+                                            //to be deleted and put back.
+            introFlag = true;
+        }   // remove this line because it keeps causing problems
+            //You need to stop the ghosts from moving before there has
+            //been keyboard input.
+
+        ///////////////////////////////////////////
+        //////////****Main Loop****////////////////
+        //////////////////////////////////////////
+
+        /* Play the Intro Song */
+        //treeObstruction();
+
+
+        /* Animate the Ghosts and adjust speed*/
+
+        if (!isScared() && !deathflag) {
+            AnimationControl(ANFACTOR);
+            speed = NORMALRATE * claraScript.speed;
+
+        } else if (isScared() && !deathflag) {
+            scaredAnimationControl(ANFACTOR);
+            speed = SCAREDRATE * claraScript.speed;
+        } else if (deathflag) {
+            deathAnimationControl(ANFACTOR);
+            speed = DEATHRATE * claraScript.speed;
+        }
+
+        //Cause the Ghosts to die upon collision
+        ghostDeath();
+
+        //startFlagCheck()
+        if (!isPacmanIntroStillPlaying()) {
+        
+        //Control the movement,
+            //use logic for intersections accordingly with respect to the life status of the ghost
+
+            if (isIntersection()) {
+                if (!deathflag) {
+                    intersectionDirection(); //set directions randomly or towards Clara 50%
+                } else if (deathflag) {
+                    ghostHealerDirection(); //set directions towards ghosthealer
+                }
+            }
+
+            //After Dealing with intersections move if possible
+                //this includes predictable logic for dealing with obstructions that are not intersections.
+                
+            smartMove(speed); //Move only after intro, only if not obstructed, and turn around after trees
+
+            //hitting a ghost makes Clara die
+            if (intersects(getClara()) && !isScared() && !deathflag) {
+                makeClaraDead();
+            }
+
+            //getting to the ghost healer makes ghosts regenerate
+            if (intersects(getGhostHealer())) {
+                deathflag = false;
+            }
+
+        }
+
+
+
+    }
+
+
+    ///////////////////////////////////////////
+    //////////****FUNCTIONS****////////////////
+    //////////////////////////////////////////
+        //Give the Ghost functions here
+
+    /* A method to have the ghost make it's way back to the healer */
+
+    public void deathMove() {
+        if (isIntersection()) {
+            intersectionDirection();
+        }
+        //Choose an Intersection Direction before moving
+        smartMove(speed); //Move only after intro, only if not obstructed, and turn around after trees
+    }
+
+
+    /* A method to cause Clara to Die upon striking a ghost */
+
+    public void ghostDeath() {
+        if (intersects(getClara()) && isScared()) {
+            deathflag = true;
+        }
+        if (deathflag) {
+            animateDead();
+            if (!diedYet) {
+                playGhostEatenSound();
+                diedYet = true;
+            }
+        }
+    }
+
+
+    /* methods to control the timing of animations */
+        //no Idea how to feed a method as a variable into another method
+            //So just used three seperate methods
+
+    //Normal Animations
+    public void AnimationControl(int animationFactor) {
+        if (animateCount == animationFactor) {
+            animateCount = 1;
+            animate();
+        } else {
+            animateCount++;
+        }
+    }
+    //Scared Animations
+    public void scaredAnimationControl(int animationFactor) {
+        if (animateCount == animationFactor) {
+            animateCount = 1;
+            animateScared();
+        } else {
+            animateCount++;
+        }
+    }
+    //Dead Animations
+    public void deathAnimationControl(int animationFactor) {
+        if (animateCount == animationFactor) {
+            animateCount = 1;
+            animateDead();
+        } else {
+            animateCount++;
+        }
+    }
+
+
+    /* A method to move when possible and world wrap*/
+
+    public void smartMove(double speedVar) {
+        if (!treeFront()) {
+            move(speedVar);
+            wrapAroundWorld(); //Put this in here, to make it more restricted
+        } else if (treeFront()) {
+            treeObstruction();
+            move(speedVar);
+            wrapAroundWorld();
+        }
+    }
+
+
+    /* A method to choose a random Direction, I didn't end up using this
+        but I'll leave it here just in case */
+
+    public String randomDirection() {
+        int rnum = Clara.getRandomNumber(3);
+        String[] directions = {
+            UP,
+            DOWN,
+            LEFT,
+            RIGHT
+        };
+        return directions[rnum];
+
+    }
+
+
+    /* If the ghosts are caught by a tree this will have them turn in 
+    a direction that is unobstructed, or otherwise turn around, this method is however predictable
+    so it should be used as a fallback only if the ghosts get trapped or to follow a path,
+    use the intersection method before this in order to make the behaviour 
+    of the ghosts less predictable */
+
+    /* if there are three or more possible routes it is handled
+       by the intersection method, if there is only two or less routes
+       it is handled by this treeObstruction method,
+       Consider the relative scenario, if there is a tree in front,
+       there must be a tree on either the left or the right, because
+       otherwise this would have been handled by the intersection method beforehand.
+
+       Make sure that this doesn't erroneously execute if it is an intersection, that
+       might trap the ghosts in a loop, use the boolean intersection flag on this method.
+       */
+
+    //Consider all possible directions, if you are obstructed by a tree
+    // in front and there are only two or fewer possible pathways
+    //there must be a tree to the relative left and/or right,
+    //hence it will always be possible to follow the path or 
+    //otherwise turn around 
+
+    public void treeObstruction() {
+        //This method is for following the path around or turning backaround
+        if (getDirection() == UP) {
+            if (!treeToLeft()) {
+                setDirection(LEFT);
+            } else if (!treeToRight()) {
+                setDirection(RIGHT);
+            } else if (!treeBelow()) {
+                setDirection(DOWN);
+            }
+        } else if (getDirection() == RIGHT) {
+            if (!treeAbove()) {
+                setDirection(UP);
+            } else if (!treeBelow()) {
+                setDirection(DOWN);
+            } else if (!treeToLeft()) {
+                setDirection(LEFT);
+            }
+        } else if (getDirection() == DOWN) {
+            if (!treeToRight()) {
+                setDirection(RIGHT);
+            } else if (!treeToLeft()) {
+                setDirection(LEFT);
+            } else if (!treeAbove()) {
+                setDirection(UP);
+            }
+        } else if (getDirection() == LEFT) {
+            if (!treeBelow()) {
+                setDirection(DOWN);
+            } else if (!treeAbove()) {
+                setDirection(UP);
+            } else if (!treeToRight()) {
+                setDirection(RIGHT);
+            }
+        }
+    }
+
+
+    /* A method to determine whether or not the location is an intersection,
+    if it is the ghost will remember the layout of the trees for later*/
+
+    public boolean isIntersection() {
+        int paths = 0;
+        if (!treeToLeft()) {
+            paths++;
+        }
+        if (!treeToRight()) {
+            paths++;
+        }
+        if (!treeAbove()) {
+            paths++;
+        }
+        if (!treeBelow()) {
+            paths++;
+        }
+
+        /*Every second time a location is considered for intersection status,
+        wipe the memory of the last intersection, that way the last instruction
+        isn't preserved for ever and the ghost won't get stuck in a loop.*/
+
+        memoryWipe();
+
+        if (paths == 3 || paths == 4) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    /* A Method to choose a random direction */
+
+    public void intersectionDirection() {
+        int rnum; //a variable to store a random number
+
+        if (pastIntersection()) {
+
+            //we'll make it a 50/50 chance of the first direction being the 
+            //direction of clara, if it's not possible to make that turn the ghost will 
+            //continue to cycle through as per usual.
+
+            //If I could use a dynamic list I could have just pulled random values
+            // from the list of available turns but ArrayList hasn't been imported.
+
+            if (Clara.getRandomNumber(1) == 0) {
+                rnum = Clara.getRandomNumber(3);
+            } else {
+                rnum = whatDirectionisClara();
+            }
+
+
+            if (rnum % 4 == 0) {
+                if (!treeAbove()) {
+                    setDirection(UP);
+                } else {
+                    rnum++;
+                }
+            }
+            if (rnum % 4 == 1) {
+                if (!treeToRight()) {
+                    setDirection(RIGHT);
+                } else {
+                    rnum++;
+                }
+            }
+            if (rnum % 4 == 2) {
+                if (!treeBelow()) {
+                    setDirection(DOWN);
+                } else {
+                    rnum++;
+                }
+            }
+            if (rnum % 4 == 3) {
+                if (!treeToLeft()) {
+                    setDirection(LEFT);
+                } else {
+                    rnum++;
+                }
+            }
+
+            intKeyVal = treeLayout();
+
+        }
+    }
+
+
+    /* A method to set the direction towards the ghost healer,
+    there can only be two directions towards the ghost healer at
+    any given direction, choosing one of those two at random is
+    the easiest way to prevent a loop 
+    
+    Again if I could use an ArrayList this would be much simpler but they don't seem to work here
+    if the lecture notes were released ahead of time and this was an option I could have implemented it.
+    */
+
+    public void ghostHealerDirection() {
+
+        if (pastIntersection()) {
+
+            if (!treeAbove() && isAboveMe(getGhostHealer()) && getDirection() != DOWN) {
+                setDirection(UP);
+            } else if (!treeBelow() && isBelowMe(getGhostHealer()) && getDirection() != UP) {
+                setDirection(DOWN);
+            } else if (!treeToLeft() && isToMyLeft(getGhostHealer()) && getDirection() != RIGHT) {
+                setDirection(LEFT);
+            } else if (!treeToRight() && isToMyRight(getGhostHealer()) && getDirection() != LEFT) {
+                setDirection(RIGHT);
+            } else {
+                //intersectionDirection();
+            }
+            intKeyVal = treeLayout();
+        } else {}
+
+    }
+
+
+    public void ghostHealerDirection2() {
+
+        int rnum; //a variable to store a random number
+
+        if (pastIntersection()) {
+
+            rnum = Clara.getRandomNumber(3);
+
+            if (rnum % 4 == 0) {
+                if (!treeAbove() && isAboveMe(getGhostHealer()) && getDirection() != UP) {
+                    setDirection(UP);
+                } else {
+                    rnum++;
+                }
+            }
+            if (rnum % 4 == 1) {
+                if (!treeToRight() && isToMyRight(getGhostHealer()) && getDirection() != LEFT) {
+                    setDirection(RIGHT);
+                } else {
+                    rnum++;
+                }
+            }
+            if (rnum % 4 == 2) {
+                if (!treeBelow() && isBelowMe(getGhostHealer()) && getDirection() != UP) {
+                    setDirection(DOWN);
+                } else {
+                    rnum++;
+                }
+            }
+            if (rnum % 4 == 3) {
+                if (!treeToLeft() && isToMyLeft(getGhostHealer()) && getDirection() != RIGHT) {
+                    setDirection(LEFT);
+                } else {
+                    rnum++;
+                }
+            }
+
+            intKeyVal = treeLayout();
+        }
+    }
+    
+
+    /* A method to return a direction of clara that is usable, 
+        if non can be used just return a random direction */
+
+    public int whatDirectionisClara() {
+        int dir;
+        if (isAboveMe(getClara()) && !treeAbove()) {
+            dir = 0;
+        } else if (isBelowMe(getClara()) && !treeBelow()) {
+            dir = 2;
+        } else if (isToMyLeft(getClara()) && !treeToLeft()) {
+            dir = 3;
+        } else if (isToMyRight(getClara()) && !treeToRight()) {
+            dir = 1;
+        } else {
+            dir = Clara.getRandomNumber(3);
+        }
+        return dir;
+    }
+
+
+    /* A key to memorise the layout of trees at a specific location, the 
+    product of prime numbers is unique, so we can use this as a unique
+    primary key to associate to the tree layout*/
+    public int treeLayout() {
+        int keyval = 1;
+        if (treeAbove()) {
+            keyval = keyval * 2;
+        }
+        if (treeToRight()) {
+            keyval = keyval * 3;
+        }
+        if (treeBelow()) {
+            keyval = keyval * 5;
+        }
+        if (treeToLeft()) {
+            keyval = keyval * 7;
+        }
+
+        return keyval;
+    }
+
+    /* a method to determine whether the ghost has move past the intersection
+        This would be much easier if getX() worked,
+        consider an intersection a decision point, if the tree layout remains the same
+        between intersections, preserve the last decision,
+        hence, if the tree layout changes, consider the intersection passed and 
+        allow the ghost to make future decisions.
+        
+        We will use prime numbers and the Fundamental Theorem of Arithmetic
+        to create a primary key associated to each layout*/
+
+    public boolean pastIntersection() {
+        if (intKeyVal == treeLayout()) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+
+    /* A method to wipe the memory of the ghost every second time this method is called
+        this will be used to prevent the ghost getting trapped in an infinite loop,
+        if the ghost get's trapped in a loop a random direction will eventually break it*/
+
+    public void memoryWipe() {
+        if (intKeyVal != treeLayout()) {
+            intersectionCounter++;
+            if (intersectionCounter % 2 == 1) {
+                intKeyVal = 0;
+            }
+
+        }
+    }
+
+///////////////////////////////////
+///////////END/////////////////////
+///////////////////////////////////
+}
+```
+

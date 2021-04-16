@@ -1,0 +1,25 @@
+{
+  "editor": {
+    "states": "[]"
+  },
+  "tabs": {
+    "all": "[]"
+  },
+  "tags": {
+    "collapsed": "[]",
+    "current": "[\"__NOTABLE_NOTES_ALL__\"]"
+  },
+  "multiEditor": {
+    "selected": "[]"
+  },
+  "preview": {
+    "states": "[[\"help-tutorial\",{\"id\":\"help-tutorial\",\"scrollTop\":0,\"scrollLeft\":0}]]"
+  },
+  "search": {
+    "query": "\"mathematica\"",
+    "recents": "[\"mathematica\",\"tools for effective\"]"
+  },
+  "spellChecker": {
+    "overrides": "[]"
+  }
+}
